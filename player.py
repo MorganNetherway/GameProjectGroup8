@@ -1,4 +1,5 @@
-import * from items
+#from items import *
+#import room file
 
 #players health - can be used globally to be modified by items/scrolls
 player_health = 100
@@ -11,3 +12,6 @@ player_defense = 10
 
 #player's inventory
 inventory = []
+
+#player starts at ....
+player_current_location = 7
