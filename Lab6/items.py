@@ -1,64 +1,124 @@
-item_id = {
-    "id": "id",
+item_sword = {
+    "id": "sword",
 
-    "name": "id card",
+    "name": "The Mighty Sword of Theseus",
 
     "description":
-    """You new shiny student ID card. Expires 1 June 2017.
-You wonder why they have printed a suicide hotline number on it?...""",
+    "",
 
     "mass": 0.010
 }
 
-item_laptop = {
-    "id": "laptop",
+item_shield = {
+    "id": "shield",
 
-    "name": "laptop",
+    "name": "a shield from a Spartan",
 
     "description":
-    "It has seen better days. At least it has a WiFi card!",
+    "",
 
     "mass": 2
 }
 
-item_money = {
-    "id": "money",
+item_spear = {
+    "id": "shield",
 
-    "name": "money",
+    "name": "a deadly spear",
 
     "description":
-    "This wad of cash is barely enough to pay your tuition fees.",
+    "",
+
+    "mass": 2
+}
+
+item_scroll_attack = {
+    "id": "scroll_attack",
+
+    "name": "an ancient scroll",
+
+    "description":
+    "",
 
     "mass": 0.5
 }
 
-item_biscuits = {
-    "id": "biscuits",
+item_scroll_health = {
+    "id": "scroll_health",
 
-    "name": "a pack of biscuits",
+    "name": "an ancient scroll",
 
-    "description": "A pack of biscuits.",
+    "description": "",
 
     "mass": 0.5
 }
 
-item_pen = {
-    "id": "pen",
+item_scroll_speed = {
+    "id": "scroll_speed",
     
-    "name": "a pen",
+    "name": "an ancient scroll",
 
-    "description": "A basic ballpoint pen.",
+    "description": "",
 
     "mass": 0.030
 }
 
-item_handbook = {
-    "id": "handbook",
+item_diary_1 = {
+    "id": "diary_1",
     
-    "name": "a student handbook",
+    "name": "",
 
     "description": "This student handbook explains everything. Seriously.",
 
     "mass": 1
  
+}
+
+item_diary_2 = {
+    "id": "shield",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+
+    "mass": 2
+}
+item_diary_3 = {
+    "id": "shield",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+
+    "mass": 2
+}
+item_diary_3 = {
+    "id": "shield",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+
+    "mass": 2
+}
+item_diary_4 = {
+    "id": "shield",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+    "mass": 2
+}
+item_diary_5 = {
+    "id": "shield",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+
+    "mass": 2
 }
