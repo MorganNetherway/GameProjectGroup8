@@ -14,4 +14,4 @@ player_defense = 10
 inventory = []
 
 #player starts at ....
-player_current_location = 7
+player_position = [7,0]
