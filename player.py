@@ -1,9 +1,17 @@
-from items import *
-from map import rooms
+#from items import *
+#import room file
 
-inventory = [item_id, item_laptop, item_money]
-carry_weight = 4
-current_carry_weight = 2.51
+#players health - can be used globally to be modified by items/scrolls
+player_health = 100
 
-# Start game at the reception
-current_room = rooms["Reception"]
+#players attack - can be used globally to be modified by items/scrolls
+player_attack = 10
+
+#players defence - can be used globally to be modified by items/scrolls
+player_defense = 10
+
+#player's inventory
+inventory = []
+
+#player starts at ....
+player_current_location = 7
