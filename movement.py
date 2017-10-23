@@ -1,3 +1,4 @@
+import random
 blockedExits = [
     "0,14", "0,13", "0,12", "0,11",
     "1,14", "1,12", "1,11", "1,9", "1,5", "1,3", "1,1",
@@ -18,13 +19,14 @@ blockedExits = [
 
 
 
-pos = [7,0]
+playerPos = [7,0]
+minPos = [6,7]
 
-def getAvailableExits(pos):
+def getAvailableExits(playerPos):
     exits = []
     directions = []
-    x = pos[0]
-    y = pos[1]
+    x = playerPos[0]
+    y = playerPos[1]
     if x < 14:
         exits.append([x + 1, y])
         directions.append("east")
@@ -40,8 +42,8 @@ def getAvailableExits(pos):
 
     return dict(zip(directions, [exit for exit in exits if convertToKey(exit) not in blockedExits]))
 
-def convertToKey(position):
-    return ",".join(map(str, position))
+def convertToKey(playerPosition):
+    return ",".join(map(str, playerPosition))
 
 
 
@@ -51,40 +53,42 @@ def testFunc():
     print (getAvailableExits([14,11])) #{'north': [14, 12], 'west': [13, 11], 'south': [14, 10]}
     print (getAvailableExits([7,0])) #{'east': [7, 1]}
     print (getAvailableExits([0,0])) #{'east': [1, 0], 'north': [0, 1]}
-
+    minPos = (minAvailableExits[random.choice(list(getAvailableExits(minPos).keys()))])
 
 def mainLoop():
-    global availableExits, pos
+    global availableExits, playerPos
     while True:
         user_input = input("W/A/S/D > ").lower()
         if user_input in "wasd":
             if user_input == "w":
                 if "north" in availableExits:
-                    pos = availableExits["north"]
+                    playerPos = availableExits["north"]
                 else:
                     print ("You cannot go any further north")
             elif user_input == "s":
                 if "south" in availableExits:
-                    pos = availableExits["south"]
+                    playerPos = availableExits["south"]
                 else:
                     print ("You cannot go any further south")
             elif user_input == "a":
                 if "west" in availableExits:
-                    pos = availableExits["west"]
+                    playerPos = availableExits["west"]
                 else:
                     print ("You cannot go any further west")
             elif user_input == "d":
                 if "east" in availableExits:
-                    pos = availableExits["east"]
+                    playerPos = availableExits["east"]
                 else:
                     print ("You cannot go any further east")
         else:
             print ("Please use the WASD keys to move")
-        availableExits = getAvailableExits(pos)
-        print(pos)
+        availableExits = getAvailableExits(playerPos)
+        print(playerPos)
 
 
 
-#testFunc()
-availableExits = getAvailableExits(pos)
-mainLoop()
+
+availableExits = getAvailableExits(playerPos)
+minAvailableExits = getAvailableExits(minPos)
+testFunc()
+#mainLoop()
