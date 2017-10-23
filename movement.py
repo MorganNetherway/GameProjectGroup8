@@ -23,24 +23,18 @@ playerPos = [7,0]
 minPos = [6,7]
 
 def getAvailableExits(playerPos):
-    exits = []
-    directions = []
+    exits = {}
     x = playerPos[0]
     y = playerPos[1]
     if x < 14:
-        exits.append([x + 1, y])
-        directions.append("east")
+        exits["east"] = [x + 1, y]
     if y < 14:
-        exits.append([x, y + 1])
-        directions.append("north")
+        exits["north"] = [x, y + 1]
     if x > 0:
-        exits.append([x - 1, y])
-        directions.append("west")
+        exits["west"] = [x - 1, y]
     if y > 0:
-        exits.append([x, y - 1])
-        directions.append("south")
-
-    return dict(zip(directions, [exit for exit in exits if convertToKey(exit) not in blockedExits]))
+        exits["south"] = [x, y - 1]
+    return {key: value for key, value in exits.items() if convertToKey(value) not in blockedExits}
 
 def convertToKey(playerPosition):
     return ",".join(map(str, playerPosition))
@@ -53,7 +47,7 @@ def testFunc():
     print (getAvailableExits([14,11])) #{'north': [14, 12], 'west': [13, 11], 'south': [14, 10]}
     print (getAvailableExits([7,0])) #{'east': [7, 1]}
     print (getAvailableExits([0,0])) #{'east': [1, 0], 'north': [0, 1]}
-    minPos = (minAvailableExits[random.choice(list(getAvailableExits(minPos).keys()))])
+    print (minAvailableExits[random.choice(list(getAvailableExits(minPos).keys()))])
 
 def mainLoop():
     global availableExits, playerPos
