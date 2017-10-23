@@ -1,4 +1,5 @@
 import random
+from rooms import *
 blockedExits = [
     "0,14", "0,13", "0,12", "0,11",
     "1,14", "1,12", "1,11", "1,9", "1,5", "1,3", "1,1",
@@ -19,7 +20,16 @@ blockedExits = [
 
 
 
+triggerRooms = [
+    {"positions": ["6,14", "6,13", "6,12", "7,14", "7,13", "7,12"], "action": room_1}
+]
+
 minPos = [6,7]
+
+def checkForTriggerRoom(player_position):
+        triggerRoom = [row for row in triggerRooms if convertToKey(player_position) in row['positions']]
+        if len(triggerRoom) > 0:
+            triggerRoom[0]['action']()
 
 def getAvailableExits(player_position):
     exits = {}

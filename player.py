@@ -15,3 +15,12 @@ inventory = []
 
 #player starts at ....
 player_position = [7,0]
+
+def equip_item():
+    global player_attack
+    global player_defense
+    for item in inventory:
+        if "attack_value" in item:
+            player_attack *= item["attack_value"]
+        if "defense_value" in item:
+            player_defense *= item["defense_value"]

@@ -30,5 +30,6 @@ while True:
                 print ("You cannot go any further east")
     else:
         print ("Please use the WASD keys to move")
+    checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
     print("You are at " + convertToKey(player_position))
