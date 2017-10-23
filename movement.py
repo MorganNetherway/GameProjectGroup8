@@ -21,15 +21,15 @@ blockedExits = [
 
 
 triggerRooms = [
-    {"positions": ["6,14", "6,13", "6,12", "7,14", "7,13", "7,12"], "action": room_1}
+    {"positions": ["6,14", "6,13", "6,12", "7,14", "7,13", "7,12"], "action": room_1},
+    {"positions": ["6,14"], "action": room_2}
 ]
 
-minPos = [6,7]
 
 def checkForTriggerRoom(player_position):
-        triggerRoom = [row for row in triggerRooms if convertToKey(player_position) in row['positions']]
-        if len(triggerRoom) > 0:
-            triggerRoom[0]['action']()
+        relevantTriggers = [row for row in triggerRooms if convertToKey(player_position) in row['positions']]
+        for trigger in relevantTriggers:
+            trigger['action']()
 
 def getAvailableExits(player_position):
     exits = {}

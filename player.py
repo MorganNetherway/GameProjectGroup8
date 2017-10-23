@@ -15,3 +15,4 @@ inventory = []
 
 #player starts at ....
 player_position = [7,0]
+minantour_position = [6,7]
