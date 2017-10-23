@@ -16,28 +16,75 @@ blockedExits = [
     "14,9", "14,8", "14,7", "14,6", "14,5", "14,1"
 ]
 
+
+
 pos = [7,0]
 
-def availableExits(pos):
+def getAvailableExits(pos):
     exits = []
+    directions = []
     x = pos[0]
     y = pos[1]
     if x < 14:
         exits.append([x + 1, y])
+        directions.append("east")
     if y < 14:
         exits.append([x, y + 1])
+        directions.append("north")
     if x > 0:
         exits.append([x - 1, y])
+        directions.append("west")
     if y > 0:
         exits.append([x, y - 1])
-    return [exit for exit in exits if convertToKey(exit) not in blockedExits]
+        directions.append("south")
 
-
+    return dict(zip(directions, [exit for exit in exits if convertToKey(exit) not in blockedExits]))
 
 def convertToKey(position):
     return ",".join(map(str, position))
 
+
+
+
+
 def testFunc():
-    print (availableExits([14,11]))
-    print (availableExits([7,0]))
-    print (availableExits([0,0]))
+    print (getAvailableExits([14,11])) #{'north': [14, 12], 'west': [13, 11], 'south': [14, 10]}
+    print (getAvailableExits([7,0])) #{'east': [7, 1]}
+    print (getAvailableExits([0,0])) #{'east': [1, 0], 'north': [0, 1]}
+
+
+def mainLoop():
+    global availableExits, pos
+    while True:
+        user_input = input("W/A/S/D > ").lower()
+        if user_input in "wasd":
+            if user_input == "w":
+                if "north" in availableExits:
+                    pos = availableExits["north"]
+                else:
+                    print ("You cannot go any further north")
+            elif user_input == "s":
+                if "south" in availableExits:
+                    pos = availableExits["south"]
+                else:
+                    print ("You cannot go any further south")
+            elif user_input == "a":
+                if "west" in availableExits:
+                    pos = availableExits["west"]
+                else:
+                    print ("You cannot go any further west")
+            elif user_input == "d":
+                if "east" in availableExits:
+                    pos = availableExits["east"]
+                else:
+                    print ("You cannot go any further east")
+        else:
+            print ("Please use the WASD keys to move")
+        availableExits = getAvailableExits(pos)
+        print(pos)
+
+
+
+#testFunc()
+availableExits = getAvailableExits(pos)
+mainLoop()
