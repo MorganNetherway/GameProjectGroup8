@@ -19,13 +19,12 @@ blockedExits = [
 
 
 
-playerPos = [7,0]
 minPos = [6,7]
 
-def getAvailableExits(playerPos):
+def getAvailableExits(player_position):
     exits = {}
-    x = playerPos[0]
-    y = playerPos[1]
+    x = player_position[0]
+    y = player_position[1]
     if x < 14:
         exits["east"] = [x + 1, y]
     if y < 14:
@@ -36,8 +35,8 @@ def getAvailableExits(playerPos):
         exits["south"] = [x, y - 1]
     return {key: value for key, value in exits.items() if convertToKey(value) not in blockedExits}
 
-def convertToKey(playerPosition):
-    return ",".join(map(str, playerPosition))
+def convertToKey(player_positionition):
+    return ",".join(map(str, player_positionition))
 
 
 
@@ -48,41 +47,3 @@ def testFunc():
     print (getAvailableExits([7,0])) #{'east': [7, 1]}
     print (getAvailableExits([0,0])) #{'east': [1, 0], 'north': [0, 1]}
     print (minAvailableExits[random.choice(list(getAvailableExits(minPos).keys()))])
-
-def mainLoop():
-    global availableExits, playerPos
-    while True:
-        user_input = input("W/A/S/D > ").lower()
-        if user_input in "wasd":
-            if user_input == "w":
-                if "north" in availableExits:
-                    playerPos = availableExits["north"]
-                else:
-                    print ("You cannot go any further north")
-            elif user_input == "s":
-                if "south" in availableExits:
-                    playerPos = availableExits["south"]
-                else:
-                    print ("You cannot go any further south")
-            elif user_input == "a":
-                if "west" in availableExits:
-                    playerPos = availableExits["west"]
-                else:
-                    print ("You cannot go any further west")
-            elif user_input == "d":
-                if "east" in availableExits:
-                    playerPos = availableExits["east"]
-                else:
-                    print ("You cannot go any further east")
-        else:
-            print ("Please use the WASD keys to move")
-        availableExits = getAvailableExits(playerPos)
-        print(playerPos)
-
-
-
-
-availableExits = getAvailableExits(playerPos)
-minAvailableExits = getAvailableExits(minPos)
-testFunc()
-#mainLoop()
