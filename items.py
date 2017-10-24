@@ -1,4 +1,4 @@
-import ascii_art
+from ascii_art import *
 
 item_sword = {
     "id": "sword",
@@ -48,7 +48,7 @@ item_scroll_attack = {
     "The old parchment feels like leather in your hands. You can't read the arcane runes hastily scrawled onto the scroll, but somehow the meaning is clear: This scroll will increase your strength.",
 
     "mass": 0.5,
-    "attack_value": 1.25
+    "attack_value": 1.25,
     "art": art_scroll
 }
 
@@ -60,7 +60,7 @@ item_scroll_health = {
     "description": "You notice the paper has some springiness when you unravel it. There's a red heart scribbled inside.",
 
     "mass": 0.5,
-    "health_value": 1.25
+    "health_value": 1.25,
     "art": art_scroll
 }
 
@@ -72,7 +72,7 @@ item_scroll_speed = {
     "description": "The scroll is damp, and completely blank. It will make you faster. You aren't quite sure how you know this.",
 
     "mass": 0.030,
-    "speed_value": 2
+    "speed_value": 2,
     "art": art_scroll
 }
 
