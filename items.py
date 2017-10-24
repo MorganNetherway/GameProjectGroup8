@@ -42,7 +42,8 @@ item_scroll_attack = {
     "description":
     "",
 
-    "mass": 0.5
+    "mass": 0.5,
+    "attack_value": 1.25
 }
 
 item_scroll_health = {
@@ -52,7 +53,8 @@ item_scroll_health = {
 
     "description": "",
 
-    "mass": 0.5
+    "mass": 0.5,
+    "health_value": 1.25
 }
 
 item_scroll_speed = {
@@ -62,7 +64,8 @@ item_scroll_speed = {
 
     "description": "",
 
-    "mass": 0.030
+    "mass": 0.030,
+    "speed_value": 2
 }
 
 item_diary_1 = {
