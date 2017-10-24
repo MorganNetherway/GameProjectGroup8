@@ -10,22 +10,22 @@ minAvailableExits = getAvailableExits(minantour_position)
 
 def moveOnMap(user_input):
     global player_position
-    if user_input == "w":
+    if user_input[1] == "north":
         if "north" in availableExits:
             player_position = availableExits["north"]
         else:
             print ("You cannot go any further north")
-    elif user_input == "s":
+    elif user_input[1] == "south":
         if "south" in availableExits:
             player_position = availableExits["south"]
         else:
             print ("You cannot go any further south")
-    elif user_input == "a":
+    elif user_input[1] == "west":
         if "west" in availableExits:
             player_position = availableExits["west"]
         else:
             print ("You cannot go any further west")
-    elif user_input == "d":
+    elif user_input[1] == "east":
         if "east" in availableExits:
             player_position = availableExits["east"]
         else:
@@ -52,20 +52,19 @@ def drop_item(item_id):
             return
     else:
         print("You cannot drop that")
-    
+
 while True:
-    user_input = input("W/A/S/D > ").lower()
+    user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
-    if user_input in "wasd":
-        moveOnMap(user_input)
-        
+    if "go" in normalised_input:
+        moveOnMap(normalised_input)
     elif "take" in normalised_input:
         if len(normalised_input) > 1:
             take_item(normalised_input[1])
-            
+
         else:
             print("What do you want to take?")
-            
+
     elif "drop" in user_input:
         if len(normalised_input) > 1:
             drop_item(normalised_input[1])
@@ -75,5 +74,4 @@ while True:
         print ("Please use the WASD keys to move")
     checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
-    print("You are at " + convertToKey(player_position))    
-    
+    print("You are at " + convertToKey(player_position))
