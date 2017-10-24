@@ -1,4 +1,4 @@
-
+import string
 #README
 #This file takes on the functionality of GAMEPARSER.py but with some added functionality.
 #As well as removing whitespace, punctuation and useless words, it also translates useful
@@ -38,6 +38,14 @@ east_words = ["east", "eastwardly", "eastwards", "right"]
 
 west_words = ["west", "westwardly", "westwards", "left"]
 
+take_words = ["take", "equip", "claim"]
+
+drop_words = ["drop", "abandon", "leave"]
+
+sword_words = ["sword"]
+
+
+
 #translations of important words into functional command words
 
 word_translations = {
@@ -49,7 +57,10 @@ word_translations = {
     "north": north_words,
     "south": south_words,
     "east": east_words, 
-    "west": west_words
+    "west": west_words,
+    "take": take_words,
+    "drop": drop_words,
+    "sword": sword_words
     }
 
 #function which translates important words into useful command words AFTER
