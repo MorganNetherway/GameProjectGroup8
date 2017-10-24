@@ -7,7 +7,7 @@ minotaur_health = 100
 minotaur_attack = 25
 
 #minotaur starts at ..........
-minotaur_current_location = 7
+minotaur_position = [6,7]
 
 #minotaur's movement speed 0.5: every two turns, 0.25: every four turns etc.
 minotaur_movement_speed = 1

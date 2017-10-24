@@ -1,4 +1,5 @@
 from player import *
+from minotaur import *
 from movement import *
 from word_translation import *
 #from minotaur_encounter import *

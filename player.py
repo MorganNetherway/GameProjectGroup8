@@ -20,7 +20,6 @@ inventory = []
 
 #player starts at ....
 player_position = [7,0]
-minantour_position = [6,7]
 
 def update_stats_take(item):
     global minotaur_movement_speed
