@@ -1,10 +1,26 @@
 import random
 from player import * #file containing variables for the players health, attack and defence after modification from items
 from minotaur import * #file containing the health and atatck for the minotaur
-from gameparser import * #normalising the player's input
+from word_translation import * #normalising the player's input
 
 def encounter_push():
-    pass
+    #picks randomly between 0 and 1
+
+    global minotaur_health
+    global player_health
+    
+    pushvar = random.randint(0, 1)
+    if pushvar == 1:
+        print('''You charge headfirst at the minotaur, shoving him into the well.
+        After a few seconds you hear a thud. Your foe lies dead at the bottom of
+        the deep cavern below. You have won!''')
+        minotaur_health = 0
+    else:
+        damage_dealt = minotaur_attack - player_defense
+        print("You charge at the minotaur and miss! The minotaur strikes you for" + str(damage_dealt) + "damage!")
+        player_health -= damage_dealt
+     
+    return
 
 def encounter_run():
     #picks randomly between 0 and 1
@@ -13,10 +29,12 @@ def encounter_run():
     #if escape is equal to 1, the player will escape
     if escape == 1:
         print("You escaped")
+
+        return
         
     #otherwise, the player will have to attack the minotaur, and the encounter_attack function will run
     else:
-        print("Escape failed. You will have to attack the minotaur.")
+        print("The minotaur sees you move and blocks your escape! You have no choice but to fight!")
         encounter_attack()
 
 def encounter_attack():
@@ -42,11 +60,15 @@ def encounter():
     print("Minotaur encountered!\n")
     print('''You can:
     ATTACK the minotaur
-    RUN from the minotaur
-    PUSH the minotaur''')
+    RUN from the minotaur''')
+
+    #checks if push command is available
+    if player_position[0] == 1 or player_position[0] == 2 or player_position[0] == 3:
+        if player_positon[1] == 6 or player_positon[1] == 7 or player_positon[1] == 8:
+            print('PUSH the minotaur')
 
     #takes the players chosen command
-    player_input = input("What do you want to do:\n")
+    player_input = input("What would you like to do?!?:\n")
 
     #normalises the player's input and runs the corresponding function
     if normalise_input(player_input) == ["push"]:
@@ -57,4 +79,6 @@ def encounter():
         
     elif normalise_input(player_input) == ["run"]:
         encounter_run()
+        return
+    
 
