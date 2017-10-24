@@ -1,3 +1,5 @@
+import ascii_art
+
 item_sword = {
     "id": "sword",
 
@@ -7,7 +9,8 @@ item_sword = {
     "A sharp, well balanced sword. It's said that a battle can be likened to a conversation. Why don't you go introduce yourself to our Minotaur?",
 
     "mass": 0.010,
-    "attack_value": 1.25
+    "attack_value": 1.25,
+    "art": art_sword
 }
 
 item_shield = {
@@ -19,7 +22,8 @@ item_shield = {
     "A small, round buckler. A shield tells the story of all the battles it has witnessed. I wonder what you will add to its tapestry?",
 
     "mass": 2,
-    "defense_value": 1.5
+    "defense_value": 1.5,
+    "art": art_shield
 }
 
 item_spear = {
@@ -31,7 +35,8 @@ item_spear = {
     "The gleaming head of this spear concentrates all of your might into a single point.",
 
     "mass": 2,
-    "attack_value": 1.5
+    "attack_value": 1.5,
+    "art": art_spear
 }
 
 item_scroll_attack = {
@@ -44,6 +49,7 @@ item_scroll_attack = {
 
     "mass": 0.5,
     "attack_value": 1.25
+    "art": art_scroll
 }
 
 item_scroll_health = {
@@ -55,6 +61,7 @@ item_scroll_health = {
 
     "mass": 0.5,
     "health_value": 1.25
+    "art": art_scroll
 }
 
 item_scroll_speed = {
@@ -66,6 +73,7 @@ item_scroll_speed = {
 
     "mass": 0.030,
     "speed_value": 2
+    "art": art_scroll
 }
 
 item_diary_1 = {
