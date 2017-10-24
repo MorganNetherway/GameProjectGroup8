@@ -21,8 +21,26 @@ blockedExits = [
 
 
 triggerRooms = [
+    {"positions": ["2,7"], "action": special_well},
     {"positions": ["6,14", "6,13", "6,12", "7,14", "7,13", "7,12"], "action": room_1},
-    {"positions": ["6,14"], "action": room_2}
+    {"positions": ["1,13"], "action": room_2},
+    {"positions": ["5,10", "6,10", "7,10"], "action": room_3},
+    {"positions": ["1,8", "1,7", "1,6", "2,8", "2,7", "2,6", "3,8", "3,7", "3,6"], "action": room_4},
+    {"positions": ["1,4"], "action": room_5},
+    {"positions": ["3,4", "3,3", "4,4", "4,3"], "action": room_6},
+    {"positions": ["1,3"], "action": room_7},
+    {"positions": ["8,0"], "action": room_8},
+    {"positions": ["9,14", "9,13", "9,12", "10,14", "10,13", "10,12", "11,14", "11,13", "11,12"], "action": room_9},
+    {"positions": ["13,11", "13,10", "14,11", "14,10"], "action": room_10},
+    {"positions": ["5,8", "5,7", "5,6", "6,8", "6,7", "6,6", "7,8", "7,7", "7,6"], "action": room_11},
+    {"positions": ["12,7", "12,6", "13,7", "13,6"], "action": room_12},
+    {"positions": ["12,4", "12,3", "12,2", "13,4", "13,3", "13,2", "14,4", "14,3", "14,2"], "action": room_13},
+    {"positions": ["12,0", "13,0", "14,0"], "action": room_14},
+    {"positions": ["4,10"], "action": gate_1},
+    {"positions": ["6,9"], "action": gate_2},
+    {"positions": ["4,7"], "action": gate_3},
+    {"positions": ["8,7"], "action": gate_4},
+    {"positions": ["4,2"], "action": gate_5}
 ]
 
 
