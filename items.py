@@ -6,7 +6,8 @@ item_sword = {
     "description":
     "",
 
-    "mass": 0.010
+    "mass": 0.010,
+    "attack_value": 1.25
 }
 
 item_shield = {
@@ -17,7 +18,8 @@ item_shield = {
     "description":
     "",
 
-    "mass": 2
+    "mass": 2,
+    "defense_value": 1.5
 }
 
 item_spear = {
@@ -28,7 +30,8 @@ item_spear = {
     "description":
     "",
 
-    "mass": 2
+    "mass": 2,
+    "attack_value": 1.5
 }
 
 item_scroll_attack = {
@@ -74,7 +77,7 @@ item_diary_1 = {
 }
 
 item_diary_2 = {
-    "id": "shield",
+    "id": "diary_2",
 
     "name": "a shield from a Spartan",
 
@@ -84,17 +87,7 @@ item_diary_2 = {
     "mass": 2
 }
 item_diary_3 = {
-    "id": "shield",
-
-    "name": "a shield from a Spartan",
-
-    "description":
-    "",
-
-    "mass": 2
-}
-item_diary_3 = {
-    "id": "shield",
+    "id": "diary_3",
 
     "name": "a shield from a Spartan",
 
@@ -104,7 +97,17 @@ item_diary_3 = {
     "mass": 2
 }
 item_diary_4 = {
-    "id": "shield",
+    "id": "diary_4",
+
+    "name": "a shield from a Spartan",
+
+    "description":
+    "",
+
+    "mass": 2
+}
+item_diary_5 = {
+    "id": "diary_5",
 
     "name": "a shield from a Spartan",
 
@@ -112,7 +115,7 @@ item_diary_4 = {
     "",
     "mass": 2
 }
-item_diary_5 = {
+item_diary_6 = {
     "id": "shield",
 
     "name": "a shield from a Spartan",
