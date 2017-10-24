@@ -27,7 +27,7 @@ item_shield = {
 }
 
 item_spear = {
-    "id": "shield",
+    "id": "spear",
 
     "name": "a deadly spear",
 
