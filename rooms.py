@@ -1,5 +1,7 @@
 from items import *
-
+#########################################################################################################
+#                Somebody needs to finish this ASAP. This isn't hard, just time consuming               #
+#########################################################################################################
 rooms = {
     "room_1": {
         "name": "Room 1",
@@ -90,7 +92,7 @@ rooms = {
 
 
 
-
+#REPLACE ALL BELOW WITH STRUCT ABOVE#
 
 def special_well():
     print("You are at the well")
