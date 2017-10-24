@@ -46,7 +46,8 @@ def take_item(item_id):
 def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
-            current_room["items"].append(inventory.pop(i))
+            item = inventory.pop(i)
+            current_room["items"].append(item)
             update_stats_drop(item)
             return
     else:
