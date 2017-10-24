@@ -38,6 +38,8 @@ east_words = ["east", "eastwardly", "eastwards", "right"]
 
 west_words = ["west", "westwardly", "westwards", "left"]
 
+push_words = ["shove", "push"]
+
 #translations of important words into functional command words
 
 word_translations = {
@@ -119,12 +121,15 @@ def remove_punct(text):
     >>> remove_punct(",go!So.?uTh")
     'goSouTh'
     """
-    no_punct = ""
-    for char in text:
-        if not (char in string.punctuation):
-            no_punct = no_punct + char
+    
+    output = list(text)
 
-    return no_punct
+    for i in range(0, len(output)):
+        if not (output[i].isalpha() or output[i] == " "):
+            output[i] = output[i].replace(output[i],"")
+
+    output = "".join(output)
+    return output
 
 
 def normalise_input(user_input):
@@ -166,7 +171,6 @@ def normalise_input(user_input):
     command_words = translate_words(filtered)
 
     return command_words
-
 
 
     
