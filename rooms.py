@@ -1,17 +1,89 @@
-rooms = [
-    {
-        "name": "room1",
+rooms = {
+    "room_1": {
+        "name": "Room 1",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
-    {
-        "name": "room2",
+    "room_2": {
+        "name": "Room 1",
         "description": "blah blah blah",
-        "items": ["sword"],
+        "items": [item_sword],
         "action": special_well
+    },
+    "room_3": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_4": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_5": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_6": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_7": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_8": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_9": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_10": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_11": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_12": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_13": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    },
+    "room_14": {
+        "name": "Room 1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
     }
-]
+}
 
 
 
