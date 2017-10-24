@@ -1,9 +1,9 @@
 from player import *
 from movement import *
 from word_translation import *
-from minotaur_encounter import *
+#from minotaur_encounter import *
 
-current_room = {"items": [item_sword, item_spear]}
+current_room = {"items": [item_sword, item_spear, item_shield]}
 
 availableExits = getAvailableExits(player_position)
 minAvailableExits = getAvailableExits(minantour_position)
@@ -34,19 +34,22 @@ def moveOnMap(user_input):
 def take_item(item_id):
     for i in range(0, len(current_room["items"])):
         if normalised_input[1] == current_room["items"][i]["id"]:
+            print("taking", current_room["items"][i]["id"])
             item = current_room["items"].pop(i)
             inventory.append(item)
             update_stats(item)
+            if "art" in item:
+                print(item["art"])
             return
-        else:
-            print("You cannot take that")
+    print("You cannot take that")
 
 def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
             current_room["items"].append(inventory.pop(i))
-        else:
-            print("You cannot drop that")
+            return
+    else:
+        print("You cannot drop that")
     
 while True:
     user_input = input("W/A/S/D > ").lower()
