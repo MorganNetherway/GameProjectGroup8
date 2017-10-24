@@ -1,3 +1,17 @@
+rooms = [
+    {
+        "name": "room1",
+        "description": "blah blah blah",
+        "items": None,
+        "action": None
+    }
+]
+
+
+
+
+
+
 def special_well():
     print("You are at the well")
 
