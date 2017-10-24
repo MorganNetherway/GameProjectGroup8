@@ -4,6 +4,12 @@ rooms = [
         "description": "blah blah blah",
         "items": None,
         "action": None
+    },
+    {
+        "name": "room2",
+        "description": "blah blah blah",
+        "items": ["sword"],
+        "action": special_well
     }
 ]
 
