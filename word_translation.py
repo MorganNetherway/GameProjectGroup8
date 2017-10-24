@@ -19,7 +19,7 @@ attack_words = ["attack", "stab", "wound", "injure", "stab", "shiv", "punch",
                "pummel", "beat up", "strike", "pound", "thrash", "inflict",
                "tackle", "kill"]
 
-block_words = ["block", "deflect", "shield", "repel", "parry", "counter"]
+block_words = ["block", "deflect", "repel", "parry", "counter"]
 
 flee_words = ["run", "sprint", "escape", "flee", "retreat", "bolt", "abscond"]
 
@@ -44,6 +44,10 @@ drop_words = ["drop", "abandon", "leave"]
 
 sword_words = ["sword"]
 
+shield_words = ["shield"]
+
+spear_words = ["spear"]
+
 
 
 #translations of important words into functional command words
@@ -60,7 +64,9 @@ word_translations = {
     "west": west_words,
     "take": take_words,
     "drop": drop_words,
-    "sword": sword_words
+    "sword": sword_words,
+    "shield": shield_words,
+    "spear": spear_words
     }
 
 #function which translates important words into useful command words AFTER
