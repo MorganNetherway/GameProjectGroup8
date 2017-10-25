@@ -51,7 +51,7 @@ triggerRooms = [
 gateRooms = [
         {"positions": ["4,2"], "gateName": "gate_6"},
         {"positions": ["4,10"], "gateName": "gate_3"},
-        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11"}                                    
+        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11"}
         ]
 
 
@@ -64,7 +64,7 @@ def checkForTriggerRoom(player_position):
                 return current_room
         return None
 
-def checkForTriggerGate(player_position):
+def checkForTriggerGate(player_position, inventory):
         gateNames = [row for row in gateRooms if convertToKey(player_position) in row['positions']]
         if len(gateNames) > 0:
                 for item in inventory:
@@ -75,6 +75,8 @@ def checkForTriggerGate(player_position):
                 print("You need to find the key for this room")
                 return False
         return True
+
+
 
 def getAvailableExits(player_position):
     exits = {}
