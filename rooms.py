@@ -59,31 +59,31 @@ rooms = {
     },
     "room_10": {
         "name": "MEDUSA’S CHAMBERS",
-        "description": "Medusa the deadly gorgon, with serpents as locks of hair, and a stare with the ability to turn people to stone was beheaded by the demigod son of Zeus, called Perseus. Athena, goddess of wisdom and war, then placed the head of Medusa on her shield, as the ultimate defence from her enemies. However it was stolen by King Minos, through Poseidon who felt pity for the king after ruining his life as well as being the natural rival of Athena. Minos placed the head in the Labyrinth in the hope that one day the Minotaur or travellers would stumble across it and turn to stone. The room is filled with statues of your journeying predecessors. """,
+        "description": "Medusa the deadly gorgon, with serpents as locks of hair, and a stare with the ability to turn people to stone was beheaded by the demigod son of Zeus, called Perseus. Athena, goddess of wisdom and war, then placed the head of Medusa on her shield, as the ultimate defence from her enemies. However it was stolen by King Minos, through Poseidon who felt pity for the king after ruining his life as well as being the natural rival of Athena. Minos placed the head in the Labyrinth in the hope that one day the Minotaur or travellers would stumble across it and turn to stone. The room is filled with statues of your journeying predecessors. \n""",
         "items": [item_diary_5],
         "action": None
     },
     "room_11": {
         "name": "THE ROOM OF THE TITANS",
-        "description": """The predecessors of the generation of the Olympian deities, were the Titans. Kronos, father of Zeus, Hades and Poseidon, was overthrown by his children just as he had overthrown his father, lord of the sky, Uranus. However the Titans seek revenge from Olympian gods, and King Minos’ vengeful nature agreed him to house the spirit of Kronos, in this chamber of the Labyrinth, where not even the gods could imagine he was hiding. Beware traveller, Kronos is the lord of time, and even setting foot in thisber without paying homage to the Titan would be foolish, as you could be trapped in a time loop within the deadly maze for eternity, not dying and simply being cham devoured by the Minotaur over and over till the end of time itself""",
+        "description": """The predecessors of the generation of the Olympian deities, were the Titans. Kronos, father of Zeus, Hades and Poseidon, was overthrown by his children just as he had overthrown his father, lord of the sky, Uranus. However the Titans seek revenge from Olympian gods, and King Minos’ vengeful nature agreed him to house the spirit of Kronos, in this chamber of the Labyrinth, where not even the gods could imagine he was hiding. Beware traveller, Kronos is the lord of time, and even setting foot in thisber without paying homage to the Titan would be foolish, as you could be trapped in a time loop within the deadly maze for eternity, not dying and simply being cham devoured by the Minotaur over and over till the end of time itself \n""",
         "items": "",
         "action": None
     },
     "room_12": {
         "name": "WAR ROOM",
-        "description": """This room contains a bust of the god Ares, with a scroll contained in his mouth. Ares is the God of War. Not well liked in either Olympus or Earth, he has to resort to resort to more nefarious methods to keep followers. Basking in the chaos of battle, he approved of King Minos' Labyrinth, although rather wanted the Minotaur to be used as a living weapon. This room is dedicated to Ares; take up his blessing and you will be able to fight for longer.""",
+        "description": """This room contains a bust of the god Ares, with a scroll contained in his mouth. Ares is the God of War. Not well liked in either Olympus or Earth, he has to resort to resort to more nefarious methods to keep followers. Basking in the chaos of battle, he approved of King Minos' Labyrinth, although rather wanted the Minotaur to be used as a living weapon. This room is dedicated to Ares; take up his blessing and you will be able to fight for longer. \n""",
         "items": [item_scroll_health],
         "action": None
     },
     "room_13": {
         "name": "HOLE TO THE UNDERWORLD",
-        "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity.""",
+        "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity. \n""",
         "items": [item_diary_2],
         "action": None
     },
     "room_14": {
         "name": "TREASURE CHAMBER",
-        "description": """Due to the appearance and ferocity of the beast, everyone forgets the fact that the Minotaur itself is half human. Humans crave wealth and power, every being that the half bull half man has devoured, all their personal possessions and gold have been stored as a trophy cabinet in the Labyrinth. King Minos himself has not forgotten to appease his half son by ladening the room with the finest antiquities fit for the gods themselves. A harsh light comes from above, and the treasure betrays an even more blinding glow. It seems unguarded, but your instincts tell you otherwise. When has wealth ever been easy to obtain?""",
+        "description": """Due to the appearance and ferocity of the beast, everyone forgets the fact that the Minotaur itself is half human. Humans crave wealth and power, every being that the half bull half man has devoured, all their personal possessions and gold have been stored as a trophy cabinet in the Labyrinth. King Minos himself has not forgotten to appease his half son by ladening the room with the finest antiquities fit for the gods themselves. A harsh light comes from above, and the treasure betrays an even more blinding glow. It seems unguarded, but your instincts tell you otherwise. When has wealth ever been easy to obtain? \n""",
         "items": [item_shield, item_scroll_health],
         "action": None
     }
