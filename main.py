@@ -36,24 +36,28 @@ def moveOnMap(user_input):
         if "north" in availableExits:
             if checkForTriggerGate(availableExits["north"]) == True:
                 player_position = availableExits["north"]
+		return True
         else:
             print ("You cannot go any further north")
     elif user_input[1] == "south":
         if "south" in availableExits:
             if checkForTriggerGate(availableExits["south"]) == True:
                 player_position = availableExits["south"]
+		return True
         else:
             print ("You cannot go any further south")
     elif user_input[1] == "west":
         if "west" in availableExits:
             if checkForTriggerGate(availableExits["west"]) == True:
                 player_position = availableExits["west"]
+		return True
         else:
             print ("You cannot go any further west")
     elif user_input[1] == "east":
         if "east" in availableExits:
             if checkForTriggerGate(availableExits["east"]) == True:
                 player_position = availableExits["east"]
+		return True
         else:
             print ("You cannot go any further east")
     else:
@@ -136,12 +140,13 @@ while True:
     user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
 
-    #minotaurMove(minotaur_position)
-    #print(minotaur_position)
 
     if "go" in normalised_input:
-        moveOnMap(normalised_input)
-
+        if moveOnMap(normalised_input):
+            minotaur_position = minotaurMove(minotaur_position, minAvailableExits)
+            if math.sqrt((minotaur_position[0] - player_position[0])**2 + (minotaur_position[1] - player_position[1])**2) < 3:
+                print ("The minatour is close.")
+            print("Minatour Position: {}".format(minotaur_position))
     elif "take" in normalised_input:
         if len(normalised_input) > 1:
             take_item(normalised_input[1])
@@ -172,7 +177,7 @@ while True:
 
     current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
-    
+    minAvailableExits = getAvailableExits(minotaur_position)    
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
         encounter()
