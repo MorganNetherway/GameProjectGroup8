@@ -4,6 +4,7 @@ from minotaur import * #file containing the health and atatck for the minotaur
 from word_translation import * #normalising the player's input
 from ascii_art import *
 
+
 def encounter_push():
     #picks randomly between 0 and 1
 
@@ -29,8 +30,8 @@ def encounter_run():
     
     #if escape is equal to 1, the player will escape
     if escape == 1:
-        print("You see your chance to escape and take it\n Which direction do you take?:\n")
-        return
+        player_input = input("You see your chance to escape and take it\n Which direction do you take?:\n")
+        return player_input
         
     #otherwise, the player will have to attack the minotaur, and the encounter_attack function will run
     else:
