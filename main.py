@@ -71,8 +71,8 @@ def take_item(item_id):
                 if "art" in item:
                     print(item["art"])
                 return
-            else:
-                print("You cannot take that")
+        else:
+            print("You cannot take that")
 
 def drop_item(item_id):
     for i in range(0, len(inventory)):
@@ -84,8 +84,8 @@ def drop_item(item_id):
                 rooms[current_room]["items"].append(item)
                 update_stats_drop(item)
                 return
-        else:
-            print("You cannot drop that.")
+    else:
+        print("You cannot drop that.")
 
 def read_item(diary):
     if diary == "diary_1":

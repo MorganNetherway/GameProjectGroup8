@@ -78,7 +78,7 @@ rooms = {
     "room_13": {
         "name": "HOLE TO THE UNDERWORLD",
         "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity. \n""",
-        "items": [item_diary_2],
+        "items": [item_diary_2, item_gate_6_key],
         "action": None
     },
     "room_14": {
