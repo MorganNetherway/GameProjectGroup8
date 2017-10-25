@@ -52,6 +52,12 @@ map_words = ["show", "map", "show map"]
 
 inventory_words = ["inventory", "inv", "check inv", "check inventory"]
 
+silver_key_words = ["silver", "silver key", "key of colour silver"]
+
+bronze_key_words = ["bronze", "bronze key", "key of colour bronze"]
+
+gold_key_words = ["gold", "gold key", "key of colour gold"]
+
 
 
 #translations of important words into functional command words
