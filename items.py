@@ -155,7 +155,7 @@ It won't be long now."""
 item_diary_5 = {
     "id": "diary_5",
 
-    "name": "V",
+    "name": "a diary: volume V",
 
     "description":
     """I lost. The beast not only outmatched me in strength, but skill. It seemed to know every move I would make.
