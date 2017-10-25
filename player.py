@@ -16,7 +16,7 @@ player_attack = 10
 player_defense = 10
 
 #player's inventory
-inventory = []
+inventory = [item_spear]
 
 #player starts at ....
 player_position = [7,0]
