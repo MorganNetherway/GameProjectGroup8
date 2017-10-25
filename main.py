@@ -4,9 +4,11 @@ from movement import *
 from word_translation import *
 from drawMapFuncs import *
 from minotaur_encounter import *
+from rooms import *
+
 
 turn = 0
-current_room = {"items": [item_sword, item_spear, item_shield]}
+current_room = rooms["room_8"]
 
 availableExits = getAvailableExits(player_position)
 minAvailableExits = getAvailableExits(minotaur_position)
@@ -66,8 +68,8 @@ def take_item(item_id):
             if "art" in item:
                 print(item["art"])
             return
-        else:
-            print("You cannot take that")
+    else:
+        print("You cannot take that")
 
 def drop_item(item_id):
     for i in range(0, len(inventory)):
