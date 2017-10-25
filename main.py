@@ -6,6 +6,7 @@ from drawMapFuncs import *
 from minotaur_encounter import *
 from rooms import *
 import math
+from items import *
 from initialise import *
 
 turn = 0
@@ -86,6 +87,19 @@ def drop_item(item_id):
         else:
             print("You cannot drop that.")
 
+def read_item(diary):
+    if diary == "diary_1":
+        print(item_diary_1["description"])
+    if diary == "diary_2":
+        print(item_diary_1["description"])
+    if diary == "diary_3":
+        print(item_diary_1["description"])
+    if diary == "diary_4":
+        print(item_diary_1["description"])
+    if diary == "diary_5":
+        print(item_diary_1["description"])
+    pass
+
 def print_inventory_items(items):
     item_length = len(items)
     item_list = []
@@ -136,8 +150,15 @@ while True:
         board = movePlayerMap(currentPosition)
         showMap(board)
 
+    elif "read" in normalised_input:
+        if len(normalised_input) > 1:
+            read_item(normalised_input[1])
+            
+        else:
+            print("What do you want to read?")
+
     else:
-        print ("Please enter a valid command. Hint: try 'go', 'take', 'show' or 'inventory'")
+        print ("Please enter a valid command. Hint: try 'go', 'read', 'take', 'show' or 'inventory'")
 
     current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
