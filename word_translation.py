@@ -78,7 +78,10 @@ word_translations = {
     "shield": shield_words,
     "spear": spear_words,
     "show": map_words,
-    "inventory": inventory_words
+    "inventory": inventory_words,
+    "silver key": silver_key_words,
+    "bronze key": bronze_key_words,
+    "gold key": gold_key_words
     }
 
 #function which translates important words into useful command words AFTER
