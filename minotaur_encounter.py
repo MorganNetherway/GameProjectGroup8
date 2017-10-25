@@ -8,7 +8,7 @@ def encounter_push():
     #picks randomly between 0 and 1
 
     global minotaur_health
-    global player_health
+    global player_stats
     
     pushvar = random.randint(0, 1)
     if pushvar == 1:
@@ -19,7 +19,7 @@ def encounter_push():
     else:
         damage_dealt = minotaur_attack - player_stats["defense"]
         print("You charge at the minotaur and miss! The minotaur strikes you for" + str(damage_dealt) + "damage!")
-        player_health -= damage_dealt
+        player_stats["health"] -= damage_dealt
      
     return
 
@@ -39,8 +39,8 @@ def encounter_run():
 
 def encounter_attack():
     #access and save the health amount of the player and minotaur
-    global player_health
     global minotaur_health
+    global player_stats
         
     #calculates the damage the player takes, based upon the minotaur's attack minus the defence value of the player (with items)
     damage_dealt = minotaur_attack - player_stats["defense"]
