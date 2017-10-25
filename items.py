@@ -3,20 +3,20 @@ from ascii_art import *
 item_gate_6_key = {
     "id": "gate_6",
     "name": "Silver Key",
-    "description": "This key will open the gate to the TOMB OF THUNDER",
-    "mass" = 0.001}
+    "description": "This key will open the gate to the TOMB OF THUNDER"
+}
 
 item_gate_3_key = {
     "id": "gate_3",
     "name": "Gold Key",
-    "description": "This key will open the gate to THE CORRIDOR OF CHAOS",
-    "mass" = 0.001}
+    "description": "This key will open the gate to THE CORRIDOR OF CHAOS"
+}
 
 item_gate_11_key = {
     "id": "gate_11",
     "name": "Bronze Key",
-    "description": "This key will open any gate leading to THE ROOM OF THE TITANS",
-    "mass" = 0.001}
+    "description": "This key will open any gate leading to THE ROOM OF THE TITANS"
+}
     
 item_sword = {
     "id": "sword",
@@ -26,7 +26,6 @@ item_sword = {
     "description":
     "A sharp, well balanced sword. It's said that a battle can be likened to a conversation. Why don't you go introduce yourself to our Minotaur?",
 
-    "mass": 0.010,
     "attack_value": 1.25,
     "art": art_sword
 }
@@ -39,7 +38,6 @@ item_shield = {
     "description":
     "A small, round buckler. A shield tells the story of all the battles it has witnessed. I wonder what you will add to its tapestry?",
 
-    "mass": 2,
     "defense_value": 1.5,
     "art": art_shield
 }
@@ -52,7 +50,6 @@ item_spear = {
     "description":
     "The gleaming head of this spear concentrates all of your might into a single point.",
 
-    "mass": 2,
     "attack_value": 1.5,
     "art": art_spear
 }
@@ -65,7 +62,6 @@ item_scroll_attack = {
     "description":
     "The old parchment feels like leather in your hands. You can't read the arcane runes hastily scrawled onto the scroll, but somehow the meaning is clear: This scroll will increase your strength.",
 
-    "mass": 0.5,
     "attack_value": 1.25,
     "art": art_scroll
 }
@@ -77,7 +73,6 @@ item_scroll_health = {
 
     "description": "You notice the paper has some springiness when you unravel it. There's a red heart scribbled inside.",
 
-    "mass": 0.5,
     "health_value": 1.25,
     "art": art_scroll
 }
@@ -89,7 +84,6 @@ item_scroll_speed = {
 
     "description": "The scroll is damp, and completely blank. It will make you faster. You aren't quite sure how you know this.",
 
-    "mass": 0.030,
     "speed_value": 2,
     "art": art_scroll
 }
@@ -105,9 +99,8 @@ known as the Minotaur, who resides at the heart of the Labyrinth of King Minos. 
 world disappeared with the heavy bang of the limestone entrance heaving shut. The air is stale and suffocating,
 and no sound travels through it. The smell of rotting flesh crawls along the walls and clings to my body.
 The last set of sacrifices came here seven years ago, and by now they should be nothing but bone. Never mind.
-I came here to end the cycle. I, Theseus the Glorious, who knows no fear. I have truly set out to do the impossible.""",
+I came here to end the cycle. I, Theseus the Glorious, who knows no fear. I have truly set out to do the impossible."""
 
-    "mass": 1
  
 }
 
@@ -123,9 +116,8 @@ I worry that I will be drained of strength before I even reach the Minotaur.
 I trace the cracks between the stones, and imagine how formidable the beast must be.
 It's almost as if I can see it stomping down these halls, it's cruel strength barely contained by the Labyrinth.
 Who built this place? Clearly no mortal man. If the Minotaur, who kills men for mere sustenance, cannot escape, then how can I hope to?
-But leaving was not what I volunteered for. I gave myself the goal of slaying the beast, and I will carry it out.""",
+But leaving was not what I volunteered for. I gave myself the goal of slaying the beast, and I will carry it out."""
 
-    "mass": 2
 }
 item_diary_3 = {
     "id": "diary_3",
@@ -140,9 +132,8 @@ They even talk of a place in which time itself falls apart and recombines in str
 If I could pass all of these trials, I would find myself at the treasure chamber, and be rewarded with wealth beyond imagination.
 I didn't come for wealth. Every direction I was told to go, I went another. I remember, back at Athens, philosophers would posit endlessly.
 If a tree fell in the woods, and no one was around to hear it, did it fall at all? I write these diaries now to define myself.
-To make sure that my time here happened. """,
+To make sure that my time here happened. """
 
-    "mass": 2
 }
 item_diary_4 = {
     "id": "diary_4",
@@ -158,9 +149,8 @@ Suddenly, I'm back at the well, but this time it's a vast sea. The sun beams dow
 The winds are still, but carry the smell of rot and viscera. I turn around, and on the floor lies a patch of straw-like fur, stained with drool.
 I remember why I'm here now. I'm comforted by the return of the Labyrinth walls, forming a cocoon of rock and stone around me.
 Less comforting is the sound of heavy breathing coming from further down the hall. The sound of air leaving its nostrils echoes towards me.
-It won't be long now.""",
+It won't be long now."""
 
-    "mass": 2
 }
 item_diary_5 = {
     "id": "diary_5",
@@ -171,8 +161,7 @@ item_diary_5 = {
     """I lost. The beast not only outmatched me in strength, but skill. It seemed to know every move I would make.
 I barely escaped, dispensing my gear and keeping only my sword for company. I should have bled out a long time ago.
 I lie here, bloodied and broken, apparently without the strength to even die.
-I suppose the architects of this prison still have a need for me.""",
-    "mass": 2
+I suppose the architects of this prison still have a need for me."""
 }
 item_diary_6 = {
     "id": "shield",
@@ -180,8 +169,7 @@ item_diary_6 = {
     "name": "a shield from a Spartan",
 
     "description":
-    "",
+    ""
 
-    "mass": 2
 }
-print(item_diary_5["description"])
+
