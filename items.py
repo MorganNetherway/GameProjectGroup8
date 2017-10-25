@@ -17,7 +17,7 @@ item_gate_11_key = {
     "name": "Bronze Key",
     "description": "This key will open any gate leading to THE ROOM OF THE TITANS"
 }
-    
+
 item_sword = {
     "id": "sword",
 
@@ -79,7 +79,7 @@ item_scroll_health = {
 
 item_scroll_speed = {
     "id": "scroll_speed",
-    
+
     "name": "an ancient scroll of speed",
 
     "description": "The scroll is damp, and completely blank. It will make you faster. You aren't quite sure how you know this.",
@@ -90,7 +90,7 @@ item_scroll_speed = {
 
 item_diary_1 = {
     "id": "diary_1",
-    
+
     "name": "",
 
     "description":
@@ -101,7 +101,7 @@ and no sound travels through it. The smell of rotting flesh crawls along the wal
 The last set of sacrifices came here seven years ago, and by now they should be nothing but bone. Never mind.
 I came here to end the cycle. I, Theseus the Glorious, who knows no fear. I have truly set out to do the impossible."""
 
- 
+
 }
 
 item_diary_2 = {
@@ -162,4 +162,22 @@ item_diary_5 = {
 I barely escaped, dispensing my gear and keeping only my sword for company. I should have bled out a long time ago.
 I lie here, bloodied and broken, apparently without the strength to even die.
 I suppose the architects of this prison still have a need for me."""
+}
+
+
+item_refs = {
+    "sword": item_sword,
+    "shield": item_shield,
+    "spear": item_spear,
+    "scroll_attack": item_scroll_attack,
+    "scroll_health": item_scroll_health,
+    "scroll_speed": item_scroll_speed,
+    "diary_1": item_diary_1,
+    "diary_2": item_diary_2,
+    "diary_3": item_diary_3,
+    "diary_4": item_diary_4,
+    "diary_5": item_diary_5,
+    "gate_6": item_gate_6_key,
+    "gate_3": item_gate_3_key,
+    "gate_11": item_gate_11_key
 }
