@@ -5,6 +5,7 @@ from word_translation import *
 from drawMapFuncs import *
 from minotaur_encounter import *
 from rooms import *
+import math
 turn = 0
 
 availableExits = getAvailableExits(player_position)
@@ -36,28 +37,28 @@ def moveOnMap(user_input):
         if "north" in availableExits:
             if checkForTriggerGate(availableExits["north"]) == True:
                 player_position = availableExits["north"]
-		return True
+                return True
         else:
             print ("You cannot go any further north")
     elif user_input[1] == "south":
         if "south" in availableExits:
             if checkForTriggerGate(availableExits["south"]) == True:
                 player_position = availableExits["south"]
-		return True
+                return True
         else:
             print ("You cannot go any further south")
     elif user_input[1] == "west":
         if "west" in availableExits:
             if checkForTriggerGate(availableExits["west"]) == True:
                 player_position = availableExits["west"]
-		return True
+                return True
         else:
             print ("You cannot go any further west")
     elif user_input[1] == "east":
         if "east" in availableExits:
             if checkForTriggerGate(availableExits["east"]) == True:
                 player_position = availableExits["east"]
-		return True
+                return True
         else:
             print ("You cannot go any further east")
     else:
