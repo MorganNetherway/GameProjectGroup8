@@ -72,14 +72,25 @@ def encounter():
     player_input = input("What would you like to do?!?:\n")
 
     #normalises the player's input and runs the corresponding function
-    if "push" in normalise_input(player_input):
-        encounter_push()
-        
-    elif "attack" in normalise_input(player_input):
-        encounter_attack()
-        
-    elif "flee" in normalise_input(player_input):
-        encounter_run()
-        return
+    while True:
+        if "push" in normalise_input(player_input):
+            encounter_push()
+            return
+            
+        elif "attack" in normalise_input(player_input):
+            encounter_attack()
+            return
+            
+        elif "flee" in normalise_input(player_input):
+            encounter_run()
+            return
+
+        else:
+            print('''You can:
+        ATTACK the minotaur
+        RUN from the minotaur
+    What would you like to do?!?:''')
+
+        player_input = input("What would you like to do?!?:\n")
     
 
