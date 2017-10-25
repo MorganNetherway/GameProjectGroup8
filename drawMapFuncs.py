@@ -41,13 +41,13 @@ def printPlayer(positionList, board):
     positionList2 = convertToMap(positionList)
     for position in positionList2:
         if board[position] == "*":
-            board = board[:position] + "P" + board[position+1:]
+            board = board[:position] + "💂" + board[position+1:]
             return(board)
         else:
             pass
 
 def removePlayer(board):
-    lastPosition = board.index("P")
+    lastPosition = board.index("💂")
     board = board[:lastPosition] + "*" + board[lastPosition+1:]
     return(board)
 
