@@ -91,13 +91,13 @@ def read_item(diary):
     if diary == "diary_1":
         print(item_diary_1["description"])
     if diary == "diary_2":
-        print(item_diary_1["description"])
+        print(item_diary_2["description"])
     if diary == "diary_3":
-        print(item_diary_1["description"])
+        print(item_diary_3["description"])
     if diary == "diary_4":
-        print(item_diary_1["description"])
+        print(item_diary_4["description"])
     if diary == "diary_5":
-        print(item_diary_1["description"])
+        print(item_diary_5["description"])
     pass
 
 def print_inventory_items(items):
