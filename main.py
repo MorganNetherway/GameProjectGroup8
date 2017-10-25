@@ -64,10 +64,13 @@ def moveOnMap(user_input):
     return False
 
 def take_item(item_id):
-    for i in range(0, len(current_room["items"])):
-        if normalised_input[1] == current_room["items"][i]["id"]:
-            print("taking", current_room["items"][i]["id"])
-            item = current_room["items"].pop(i)
+    if current_room == None:
+        print("You cannot take that")
+        return
+    for i in range(0, len(rooms[current_room]["items"])):
+        if normalised_input[1] == rooms[current_room]["items"][i]["id"]:
+            print("taking", rooms[current_room]["items"][i]["id"])
+            item = rooms[current_room]["items"].pop(i)
             inventory.append(item)
             update_stats_take(item)
             if "art" in item:
@@ -77,10 +80,13 @@ def take_item(item_id):
         print("You cannot take that")
 
 def drop_item(item_id):
+    if current_room == None:
+        print("You cannot drop that here")
+        return
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
             item = inventory.pop(i)
-            current_room["items"].append(item)
+            rooms[current_room]["items"].append(item)
             update_stats_drop(item)
             return
     else:
