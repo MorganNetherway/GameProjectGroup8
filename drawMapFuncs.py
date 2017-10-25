@@ -135,7 +135,6 @@ def movePlayerMap(position):
     global board
 
     board = removePlayer(board)
-    print(board)
     board = printPlayer(position, board)
     return(board)
 
