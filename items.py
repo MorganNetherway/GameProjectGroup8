@@ -91,7 +91,7 @@ item_scroll_speed = {
 item_diary_1 = {
     "id": "diary_1",
     
-    "name": "",
+    "name": "a diary: volume I",
 
     "description":
     """I, Theseus, son of Aegeus, come from the great metropolis of Athens to slay the beast
@@ -107,7 +107,7 @@ I came here to end the cycle. I, Theseus the Glorious, who knows no fear. I have
 item_diary_2 = {
     "id": "diary_2",
 
-    "name": "",
+    "name": "a diary: volume II",
 
     "description":
     """It doesn't matter the direction you turn, whether left or right, forwards or backwards, you always end up at the same place.
@@ -122,7 +122,7 @@ But leaving was not what I volunteered for. I gave myself the goal of slaying th
 item_diary_3 = {
     "id": "diary_3",
 
-    "name": "a shield from a Spartan",
+    "name": "a diary: volume III",
 
     "description":
     """I listened. In between the silence, I found whispers. They told me the path forward.
@@ -138,7 +138,7 @@ To make sure that my time here happened. """
 item_diary_4 = {
     "id": "diary_4",
 
-    "name": "a shield from a Spartan",
+    "name": "a diary: volume IV",
 
     "description":
     """I've been here a long time. I'm not sure how long, as daylight doesn't visit this maze.
@@ -155,7 +155,7 @@ It won't be long now."""
 item_diary_5 = {
     "id": "diary_5",
 
-    "name": "a shield from a Spartan",
+    "name": "V",
 
     "description":
     """I lost. The beast not only outmatched me in strength, but skill. It seemed to know every move I would make.
