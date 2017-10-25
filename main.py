@@ -165,5 +165,6 @@ while True:
     checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
     print("You are at " + convertToKey(player_position))
-    
+    if minotaur_position == player_position:
+        encounter()
     turn += 1
