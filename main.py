@@ -14,24 +14,13 @@ availableExits = getAvailableExits(player_position)
 minAvailableExits = getAvailableExits(minotaur_position)
 
 def list_of_items(items):
-    """This function takes a list of items (see items.py for the definition) and
-    returns a comma-separated list of item names (as a string). For example:
-    >>> list_of_items([item_pen, item_handbook])
-    'a pen, a student handbook'
-    >>> list_of_items([item_id])
-    'id card'
-    >>> list_of_items([])
-    ''
-    >>> list_of_items([item_money, item_handbook, item_laptop])
-    'money, a student handbook, laptop'
-    """
-    csl_items = []
+    l_items = []
 
     for item in items:
-        csl_items.append(item["name"])
-    csl_list = ", ".join(csl_items)
+        l_items.append(item["name"])
+    l_list = ", ".join(l_items)
 
-    return csl_list
+    return l_list
 
 def moveOnMap(user_input):
     global player_position
@@ -98,13 +87,6 @@ def drop_item(item_id):
             print("You cannot drop that.")
 
 def print_inventory_items(items):
-    """This function takes a list of inventory items and displays it nicely, in a
-    manner similar to print_room_items(). The only difference is in formatting:
-    print "You have ..." instead of "There is ... here.". For example:
-    >>> print_inventory_items(inventory)
-    You have id card, laptop, money.
-    <BLANKLINE>
-    """
     item_length = len(items)
     item_list = []
 
@@ -148,12 +130,6 @@ def print_inventory_items(items):
 print("")
 
 while True:
-    '''
-    if current_room == None:
-        pass
-    else:
-        print(current_room)
-    '''
     user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
 
