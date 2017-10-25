@@ -82,12 +82,15 @@ def take_item(item_id):
 def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
-            item = inventory.pop(i)
-            rooms[current_room]["items"].append(item)
-            update_stats_drop(item)
-            return
-    else:
-        print("You cannot drop that")
+            if current_room == None:
+                print("You cannot drop that")
+            else:
+                item = inventory.pop(i)
+                rooms[current_room]["items"].append(item)
+                update_stats_drop(item)
+                return
+        else:
+            print("You cannot drop that")
 
 def print_inventory_items(items):
     """This function takes a list of inventory items and displays it nicely, in a
@@ -124,6 +127,12 @@ def print_inventory_items(items):
             item_list.append(item_diary_4)
         elif items[x]["id"] == "diary_5":
             item_list.append(item_diary_5)
+        elif items[x]["id"] == "gate_6":
+            item_list.append(item_gate_6_key)
+        elif items[x]["id"] == "gate_3":
+            item_list.append(item_gate_3_key)
+        elif items[x]["id"] == "gate_11":
+            item_list.append(item_gate_11_key)
         else:
             pass
     if len(item_list) == 0:
