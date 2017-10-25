@@ -23,8 +23,8 @@ and good for food; the tree of life also in the midst of the garden, and the tre
         "action": None
     },
     "room_4": {
-        "name": "Room 1",
-        "description": "Much better then the other nameless rooms.",
+        "name": "FOUNTAIN OF DELPHI",
+        "description": "This chamber is an interesting one, one shall not pass without receiving a riddle from the prophecy giver the Oracle of Delphi herself. Beware traveller, she can hear your thoughts and play on your inner most secrets, physically you must be up to the task of beating the Minotaur, but mentally it is this chamber which you must overcome, stay clear of the green light and navigate carefully around the marble fountain, voices will be heard.",
         "items": "",
         "action": None
     },
