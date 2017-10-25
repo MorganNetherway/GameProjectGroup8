@@ -47,8 +47,8 @@ rooms = {
     },
     "room_8": {
         "name": "PROMETHEUS' LAIR",
-        "description": "Prometheus was the Titan who created mankind, and our greatest ally. Avoiding the climactic Titanomachy, and therefore surviving the subsequent banishment of Titans to the depths of Tartarus, he lived to struggle against Zeus in future confrontations. He stole fire from Zeus after it was wrongfully taken from mankind, and in return was chained to a rock while an eagle came daily to eat his liver. As Prometheus is immortal, this lasted until the hero Heracles came and freed him. How King Minos obtained that rock is certainly a mystery.",
-        "items": "",
+        "description": "Prometheus was the Titan who created mankind, and our greatest ally. Avoiding the climactic Titanomachy, and therefore surviving the subsequent banishment of Titans to the depths of Tartarus, he lived to struggle against Zeus in future confrontations. He stole fire from Zeus after it was wrongfully taken from mankind, and in return was chained to a rock while an eagle came daily to eat his liver. As Prometheus is immortal, this lasted until the hero Heracles came and freed him. How King Minos obtained that rock is certainly a mystery. This room acts as an entryway to king Minos' despicable labyrinth...",
+        "items": item_diary_1,
         "action": None
     },
     "room_9": {
