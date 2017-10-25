@@ -76,6 +76,8 @@ speed_scroll_words = ["speed scroll", "scroll of speed"]
 
 read_words = ["read", "scour", "contemplate on"]
 
+push_words = ["push", "shove", "throw"]
+
 #translations of important words into functional command words
 
 word_translations = {
