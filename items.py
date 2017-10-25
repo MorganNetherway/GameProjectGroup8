@@ -57,7 +57,7 @@ item_spear = {
 item_scroll_attack = {
     "id": "scroll_strength",
 
-    "name": "an ancient scroll of attack",
+    "name": "an ancient scroll of strength",
 
     "description":
     "The old parchment feels like leather in your hands. You can't read the arcane runes hastily scrawled onto the scroll, but somehow the meaning is clear: This scroll will increase your strength.",
