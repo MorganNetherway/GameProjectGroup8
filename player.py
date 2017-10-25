@@ -1,5 +1,6 @@
 #import room file
 from items import *
+from powerups import *
 from minotaur import minotaur_movement_speed
 
 
