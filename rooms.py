@@ -5,55 +5,56 @@ from items import *
 rooms = {
     "room_1": {
         "name": "GENESIS GARDEN",
-        "description": "blah blah blah",
+        "description": '''And out of the ground made the Lord God to grow every tree that is pleasant to the sight,
+and good for food; the tree of life also in the midst of the garden, and the tree of knowledge of good and evil. — Genesis 2:9''',
         "items": None,
         "action": None
     },
     "room_2": {
         "name": "THE TROJAN HORSE",
-        "description": "blah blah blah",
+        "description": "The bane of Troy.",
         "items": [item_sword],
         "action": "special_well"
     },
     "room_3": {
         "name": "CORRIDOR OF CHAOS ",
-        "description": "blah blah blah",
+        "description": "Definitely no Minotaurs here.",
         "items": None,
         "action": None
     },
     "room_4": {
         "name": "Room 1",
-        "description": "blah blah blah",
+        "description": "Much better then the other nameless rooms.",
         "items": None,
         "action": None
     },
     "room_5": {
         "name": "MIDAS TOUCH",
-        "description": "blah blah blah",
+        "description": "Don't touch anything you don't want turning into SOLID GOLD.",
         "items": None,
         "action": None
     },
     "room_6": {
         "name": "TOMB OF THUNDER",
-        "description": "blah blah blah",
+        "description": "Thunder booms in the distance... or maybe you disturned the Minotaur.",
         "items": None,
         "action": None
     },
     "room_7": {
         "name": "THE BASILISK NEST",
-        "description": "blah blah blah",
+        "description": "Don't look into their eyes.",
         "items": None,
         "action": None
     },
     "room_8": {
         "name": "PROMETHEUS' LAIR",
-        "description": "blah blah blah",
+        "description": "This is where he hoards the fires of Mount Olympus.",
         "items": None,
         "action": None
     },
     "room_9": {
         "name": "THE SPRING OF ZEUS",
-        "description": "blah blah blah",
+        "description": "Nothing better after of hard days work then relaxing in the spring, even if your the God of thunder.",
         "items": None,
         "action": None
     },
