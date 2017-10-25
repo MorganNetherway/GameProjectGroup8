@@ -165,7 +165,7 @@ while True:
     minAvailableExits = getAvailableExits(minotaur_position)
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
-        encounter()
+        encounter(player_position)
 
     if player_stats["health"] <= 0:
         print('''After a grueling spar with the minotaur, you have followed in the footsteps of Theseus, and have fallen before the Minotaur.''')

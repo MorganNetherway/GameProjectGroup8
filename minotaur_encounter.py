@@ -56,7 +56,7 @@ def encounter_attack():
     print("The minotaur's health is now " + str(minotaur_health) + ".")
     return
 
-def encounter():
+def encounter(player_position):
     print(art_minotaur)
     print("Minotaur encountered!\n")
     print('''You can:
@@ -65,7 +65,7 @@ def encounter():
 
     #checks if push command is available
     if player_position[0] == 1 or player_position[0] == 2 or player_position[0] == 3:
-        if player_positon[1] == 6 or player_positon[1] == 7 or player_positon[1] == 8:
+        if player_position[1] == 6 or player_position[1] == 7 or player_position[1] == 8:
             print('PUSH the minotaur')
 
     #takes the players chosen command
