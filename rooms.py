@@ -86,11 +86,11 @@ rooms = {
         "description": """Due to the appearance and ferocity of the beast, everyone forgets the fact that the Minotaur itself is half human. Humans crave wealth and power, every being that the half bull half man has devoured, all their personal possessions and gold have been stored as a trophy cabinet in the Labyrinth. King Minos himself has not forgotten to appease his half son by ladening the room with the finest antiquities fit for the gods themselves. A harsh light comes from above, and the treasure betrays an even more blinding glow. It seems unguarded, but your instincts tell you otherwise. When has wealth ever been easy to obtain? \n""",
         "items": [item_shield, item_gate_6_key],
         "action": None
-    }
+    },
        "room_15": {
         "name": "Burial Chamber",
         "description": """A tiny burial chamber, with 2 main tombs. On one of the tombs is a hook for a key""",
         "items": [item_scroll_health],
-        "description": """A tiny burial chamber, with 2 main tombs. On one of the tombs is a hook for a key""",
-      }
-
+        "action": None
+    }
+    }
