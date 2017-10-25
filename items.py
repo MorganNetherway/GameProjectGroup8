@@ -1,19 +1,19 @@
 from ascii_art import *
 
 item_gate_6_key = {
-    "id": "gate_6",
+    "id": "silver key",
     "name": "Silver Key",
     "description": "This key will open the gate to the TOMB OF THUNDER"
 }
 
-item_gate_3_key = {
-    "id": "gate_12",
+item_gate_12_key = {
+    "id": "gold key",
     "name": "Gold Key",
     "description": "This key will open the gate to THE CORRIDOR OF CHAOS"
 }
 
 item_gate_11_key = {
-    "id": "gate_11",
+    "id": "bronze key",
     "name": "Bronze Key",
     "description": "This key will open any gate leading to THE ROOM OF THE TITANS"
 }
@@ -178,6 +178,6 @@ item_refs = {
     "diary_4": item_diary_4,
     "diary_5": item_diary_5,
     "gate_6": item_gate_6_key,
-    "gate_12": item_gate_3_key,
+    "gate_12": item_gate_12_key,
     "gate_11": item_gate_11_key
 }
