@@ -189,11 +189,11 @@ while True:
         print("      LOSING MESSAGE            ")
         break
     
-    if minotaur.health <= 0:
+    if minotaur_health <= 0:
         print("      WINNING MESSGAE           ")
         break
     
-    if minotaur.health and player_stats["health"] >= 0:
+    if minotaur_health and player_stats["health"] <= 0:
         print("        DRAW MESSAGE            ")
         break
     
