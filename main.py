@@ -5,10 +5,7 @@ from word_translation import *
 from drawMapFuncs import *
 from minotaur_encounter import *
 from rooms import *
-
-
 turn = 0
-
 
 availableExits = getAvailableExits(player_position)
 minAvailableExits = getAvailableExits(minotaur_position)
@@ -130,12 +127,17 @@ def print_inventory_items(items):
 print("")
 
 while True:
-    print(current_room)
+    '''
+    if current_room == None:
+        pass
+    else:
+        print(current_room)
+    '''
     user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
 
-    minotaurMove(minotaur_position)
-    print(minotaur_position)
+    #minotaurMove(minotaur_position)
+    #print(minotaur_position)
 
     if "go" in normalised_input:
         moveOnMap(normalised_input)
@@ -157,6 +159,7 @@ while True:
         
             
     elif "show" in normalised_input:
+
         currentPosition = []
         position = convertToKey(player_position)
         currentPosition.append(position)
