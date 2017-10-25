@@ -60,15 +60,15 @@ gold_key_words = ["gold", "gold key", "key of colour gold"]
 
 diary_1_words = ["diary 1", "diary page 1", "diary1", "diary page1", "diary extract 1", "diary extract1"]
 
-diary_2_words = ["diary 2", "diary page 2", "diary1", "diary page2", "diary extract 2", "diary extract1"]
+diary_2_words = ["diary 2", "diary page 2", "diary2", "diary page2", "diary extract 2", "diary extract2"]
 
-diary_3_words = ["diary 3", "diary page 3", "diary1", "diary page3", "diary extract 3", "diary extract1"]
+diary_3_words = ["diary 3", "diary page 3", "diary3", "diary page3", "diary extract 3", "diary extract3"]
 
-diary_4_words = ["diary 4", "diary page 4", "diary1", "diary page4", "diary extract 4", "diary extract1"]
+diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extract 4", "diary extract4"]
 
-diary_5_words = ["diary 5", "diary page 5", "diary1", "diary page5", "diary extract 5", "diary extract1"]
+diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5"]
 
-strength_scroll_words = ["strength scroll", "scroll of strength"]
+attack_scroll_words = ["attack scroll", "scroll of attack"]
 
 health_scroll_words = ["health scroll", "scroll of health"]
 
@@ -101,7 +101,7 @@ word_translations = {
     "diary_3": diary_3_words,
     "diary_4": diary_4_words,
     "diary_5": diary_5_words,
-    "scroll_strength": strength_scroll_words,
+    "scroll_attack": attack_scroll_words,
     "scroll_health": health_scroll_words,
     "scroll_speed": speed_scroll_words
     }
