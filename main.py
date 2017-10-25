@@ -6,6 +6,7 @@ from drawMapFuncs import *
 from minotaur_encounter import *
 from rooms import *
 import math
+
 turn = 0
 
 availableExits = getAvailableExits(player_position)
@@ -33,6 +34,7 @@ def list_of_items(items):
 
 def moveOnMap(user_input):
     global player_position
+    
     if user_input[1] == "north":
         if "north" in availableExits:
             if checkForTriggerGate(availableExits["north"]) == True:
@@ -65,10 +67,10 @@ def moveOnMap(user_input):
         print("That movement isn't possible, try again.")
 
 def take_item(item_id):
-    for i in range(0, len(current_room["items"])):
-        if normalised_input[1] == current_room["items"][i]["id"]:
-            print("taking", current_room["items"][i]["id"])
-            item = current_room["items"].pop(i)
+    for i in range(0, len(rooms[current_room]["items"])):
+        if normalised_input[1] == rooms[current_room]["items"][i]["id"]:
+            print("taking", rooms[current_room]["items"][i]["id"])
+            item = rooms[current_room]["items"].pop(i)
             inventory.append(item)
             update_stats_take(item)
             if "art" in item:
@@ -81,7 +83,7 @@ def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
             item = inventory.pop(i)
-            current_room["items"].append(item)
+            rooms[current_room]["items"].append(item)
             update_stats_drop(item)
             return
     else:
