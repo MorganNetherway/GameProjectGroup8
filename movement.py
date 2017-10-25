@@ -61,7 +61,7 @@ def checkForTriggerRoom(player_position):
                 current_room = roomNames[0]['roomName']
                 print("You are in" + " " + rooms[current_room]["name"])
                 print(rooms[current_room]["description"])
-                print("In this room, there is a:")
+                print("In this room, there is: ", end = "")
                 for item in rooms[current_room]["items"]:
                         print(item["name"])
                 return current_room
