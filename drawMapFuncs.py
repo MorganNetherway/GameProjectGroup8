@@ -10,7 +10,7 @@ def drawMap(board):
 
     #count will equal column number aka y axis in grid
     for count in range(0,noColumns):
-        board += " * |" * (noColumns)
+        board += " . |" * (noColumns)
         board += "  "
         board += "\n"
         board += "----" * noColumns
@@ -40,7 +40,7 @@ def convertToMap(positionList):
 def printPlayer(positionList, board):
     positionList2 = convertToMap(positionList)
     for position in positionList2:
-        if board[position] == "*":
+        if board[position] == ".":
             board = board[:position] + "P" + board[position+1:]
             return(board)
         else:
@@ -48,12 +48,12 @@ def printPlayer(positionList, board):
 
 def removePlayer(board):
     lastPosition = board.index("P")
-    board = board[:lastPosition] + "*" + board[lastPosition+1:]
+    board = board[:lastPosition] + "." + board[lastPosition+1:]
     return(board)
 
 def printWall(positionList, board):
     for position in positionList:
-        if board[position] == "*":
+        if board[position] == ".":
             board = board[:position] + "#" + board[position+1:]
         else:
             pass
