@@ -65,7 +65,7 @@ def checkForTriggerRoom(player_position):
                 current_room = roomNames[0]['roomName']
                 print("You are in" + " " + rooms[current_room]["name"] + "\n")
                 print(rooms[current_room]["description"] + "\n")
-                print("In this room, there is: ", end = "")
+                print("In this room, there is: ", end = "" + "\n")
                 for item in rooms[current_room]["items"]:
                         print(item["name"])
                 return current_room
@@ -93,8 +93,9 @@ def checkForTriggerGate(player_position, inventory):
                         else:
                                 for item in inventory:
                                         print(item["name"])
-                                        print(gateNames[0]["gateName"] + " unlocked by " + gateNames[0]["unlocked_by"])
+                                        print("Gate unlocked by " + gateNames[0]["unlocked_by"])
                                         if item["id"] == gateNames[0]["gateName"]:
+                                                gateNames[0]["unlocked"] = True
                                                 return True
                                 print("You need to find the key for this room")
                                 return False
