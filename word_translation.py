@@ -48,6 +48,8 @@ shield_words = ["shield"]
 
 spear_words = ["spear"]
 
+map_words = ["show", "map", "show map"]
+
 
 
 #translations of important words into functional command words
@@ -66,7 +68,8 @@ word_translations = {
     "drop": drop_words,
     "sword": sword_words,
     "shield": shield_words,
-    "spear": spear_words
+    "spear": spear_words,
+    "show": map_words
     }
 
 #function which translates important words into useful command words AFTER
