@@ -67,30 +67,34 @@ def moveOnMap(user_input):
         print("That movement isn't possible, try again.")
 
 def take_item(item_id):
-    for i in range(0, len(rooms[current_room]["items"])):
-        if normalised_input[1] == rooms[current_room]["items"][i]["id"]:
-            print("taking", rooms[current_room]["items"][i]["id"])
-            item = rooms[current_room]["items"].pop(i)
-            inventory.append(item)
-            update_stats_take(item)
-            if "art" in item:
-                print(item["art"])
-            return
+    if current_room == None:
+        print("There is nothing here.")
+        return
     else:
-        print("You cannot take that")
+        for i in range(0, len(rooms[current_room]["items"])):
+            if normalised_input[1] == rooms[current_room]["items"][i]["id"]:
+                print("taking", rooms[current_room]["items"][i]["id"])
+                item = rooms[current_room]["items"].pop(i)
+                inventory.append(item)
+                update_stats_take(item)
+                if "art" in item:
+                    print(item["art"])
+                return
+            else:
+                print("You cannot take that")
 
 def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
             if current_room == None:
-                print("You cannot drop that")
+                print("You cannot drop that.")
             else:
                 item = inventory.pop(i)
                 rooms[current_room]["items"].append(item)
                 update_stats_drop(item)
                 return
         else:
-            print("You cannot drop that")
+            print("You cannot drop that.")
 
 def print_inventory_items(items):
     """This function takes a list of inventory items and displays it nicely, in a
@@ -136,7 +140,7 @@ def print_inventory_items(items):
         else:
             pass
     if len(item_list) == 0:
-        pass
+        print("You have nothing haha")
     else:
         x = list_of_items(item_list)
         print("You have " + x + ".")
