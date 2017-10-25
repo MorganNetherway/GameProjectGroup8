@@ -190,11 +190,7 @@ while True:
         showMap(board)
 
     else:
-<<<<<<< HEAD
         print ("Please enter a valid command. Hint: try 'go', 'take', 'show' or 'inventory'")
-=======
-        print ("Please type go 'direction' to move")
->>>>>>> 4088b265ec432a6dbb369599aff1823ea8275119
 
     current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
