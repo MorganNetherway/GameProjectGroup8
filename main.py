@@ -184,7 +184,8 @@ while True:
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
         encounter()
-    if player_stats["health"] =< 0:
+        
+    if player_stats["health"] <= 0:
         print("      LOSING MESSAGE            ")
         break
     
