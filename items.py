@@ -55,7 +55,7 @@ item_spear = {
 }
 
 item_scroll_attack = {
-    "id": "scroll_attack",
+    "id": "scroll_strength",
 
     "name": "an ancient scroll of attack",
 
