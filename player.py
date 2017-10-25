@@ -20,7 +20,7 @@ player_stats = {"health": 100, "attack": 10, "defense": 10, "speed": 1}
 #player_defense = 10
 
 #player's inventory
-inventory = [item_spear]
+inventory = []
 
 #player starts at ....
 player_position = [7,0]
