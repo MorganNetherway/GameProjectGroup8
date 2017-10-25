@@ -11,13 +11,13 @@ rooms = {
     },
     "room_2": {
         "name": "THE TROJAN HORSE",
-        "description": "The bane of Troy.",
+        "description": "The tale of the Trojan Horse is well known. Betrayal is a common theme throughout history and myth. It appears you've found the one thing that you can always trust with your life: A sword.",
         "items": [item_sword],
         "action": "special_well"
     },
     "room_3": {
         "name": "CORRIDOR OF CHAOS ",
-        "description": "Definitely no Minotaurs here.",
+        "description": "The hallway shifts and turns dangerously, twisting into shapes that cut deep into your mind. Fortunately, the hallway appears too small for the Minotaur to fit through. However, a second ago you were walking on the ceiling, so who can be sure? The primogeniture of nothingness, Chaos was the first thing to exist. Perhaps this is the true center of the Labyrinth?",
         "items": "",
         "action": None
     },

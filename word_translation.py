@@ -68,11 +68,13 @@ diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extr
 
 diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5","diary"]
 
-attack_scroll_words = ["attack scroll", "scroll of attack"]
+attack_scroll_words = ["strength scroll", "scroll of strength"]
 
 health_scroll_words = ["health scroll", "scroll of health"]
 
 speed_scroll_words = ["speed scroll", "scroll of speed"]
+
+read_words = ["read", "scour", "contemplate on"]
 
 #translations of important words into functional command words
 
@@ -101,9 +103,10 @@ word_translations = {
     "diary_3": diary_3_words,
     "diary_4": diary_4_words,
     "diary_5": diary_5_words,
-    "scroll_attack": attack_scroll_words,
+    "scroll_strength": attack_scroll_words,
     "scroll_health": health_scroll_words,
-    "scroll_speed": speed_scroll_words
+    "scroll_speed": speed_scroll_words,
+    "read": read_words
     }
 
 #function which translates important words into useful command words AFTER
