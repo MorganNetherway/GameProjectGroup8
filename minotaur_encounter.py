@@ -2,6 +2,7 @@ import random
 from player import * #file containing variables for the players health, attack and defence after modification from items
 from minotaur import * #file containing the health and atatck for the minotaur
 from word_translation import * #normalising the player's input
+from ascii_art import *
 
 def encounter_push():
     #picks randomly between 0 and 1
@@ -57,6 +58,7 @@ def encounter_attack():
     return
 
 def encounter():
+    print(art_minotaur)
     print("Minotaur encountered!\n")
     print('''You can:
     ATTACK the minotaur
