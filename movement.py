@@ -56,7 +56,7 @@ gateRooms = [
 
 def checkForTriggerRoom(player_position):
         global current_room
-        roomNames = [row for row in triggerRooms if convertToKey(player_position) in row['positions']]
+        roomNames = [row for row in triggerRooms if convertToKey(player_position) in row['positions']] #Create a new list of matching rooms, where the position is in the po
         if len(roomNames) > 0:
                 current_room = roomNames[0]['roomName']
                 print("You are in" + " " + rooms[current_room]["name"])
