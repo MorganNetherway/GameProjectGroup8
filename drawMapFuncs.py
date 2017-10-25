@@ -28,14 +28,12 @@ def convertToMap(positionList):
         itemY.append(int(items.split(",")[1]))
 
     itemLength = len(itemY)
-    startPositions = [1737, 1613, 1489, 1365, 1241, 1117, 1001, 869, 745, 621, 497, 373, 249, 125, 1]
+    startPositions = [1737, 1613, 1489, 1365, 1241, 1117, 993, 869, 745, 621, 497, 373, 249, 125, 1]
     for i in range(0, itemLength):
         if 0 <= itemY[i] <= 14:
             start = startPositions[itemY[i]]
             start = start + (itemX[i]*4)
             finalList.append(start)
-        else:
-            pass
     return(finalList)
 
 def printPlayer(positionList, board):
@@ -87,4 +85,7 @@ def initMap(board):
 
 
 board = initMap(board)
+#board = drawMap(board)
 showMap(board)
+#for ch in range(1,1860,4):
+    #print(board[ch] + str(ch))
