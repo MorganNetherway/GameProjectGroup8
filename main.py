@@ -8,7 +8,7 @@ from rooms import *
 
 
 turn = 0
-current_room = rooms["room_8"]
+
 
 availableExits = getAvailableExits(player_position)
 minAvailableExits = getAvailableExits(minotaur_position)
@@ -126,6 +126,7 @@ def print_inventory_items(items):
 print("")
 
 while True:
+    print(current_room)
     user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
 
@@ -162,7 +163,7 @@ while True:
     else:
         print ("Please use the WASD keys to move")
 
-    checkForTriggerRoom(player_position)
+    current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
