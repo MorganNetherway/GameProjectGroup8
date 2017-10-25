@@ -63,6 +63,3 @@ the map unhindered.
 You can move 1 tile per turn. Rooms may be multiple tiles tall or wide. ''')
 
 print('''Your adventure begins... good luck!!!''')
-
-      
-
