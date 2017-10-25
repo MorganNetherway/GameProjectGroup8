@@ -70,8 +70,8 @@ rooms = {
         "action": None
     },
     "room_12": {
-        "name": "FOUNTAIN OF DELPHI",
-        "description": """This chamber is an interesting one, one shall not pass without receiving a riddle from the prophecy giver the Oracle of Delphi herself. Beware traveller, she can hear your thoughts and play on your inner most secrets, physically you must be up to the task of beating the Minotaur, but mentally it is this chamber which you must overcome, stay clear of the green light and navigate carefully around the marble fountain, voices will be heard.""",
+        "name": "WAR ROOM",
+        "description": """This room contains a bust of the god Ares, with a scroll contained in his mouth. Ares is the God of War. Not well liked in either Olympus or Earth, he has to resort to resort to more nefarious methods to keep followers. Basking in the chaos of battle, he approved of King Minos' Labyrinth, although rather wanted the Minotaur to be used as a living weapon. This room is dedicated to Ares; take up his blessing and you will be able to fight for longer.""",
         "items": [item_scroll_health],
         "action": None
     },
