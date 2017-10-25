@@ -190,7 +190,7 @@ while True:
         showMap(board)
 
     else:
-        print ("Please use the WASD keys to move")
+        print ("Please type go 'direction' to move")
 
     current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
