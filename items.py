@@ -57,7 +57,7 @@ item_spear = {
 item_scroll_attack = {
     "id": "scroll_attack",
 
-    "name": "an ancient scroll",
+    "name": "an ancient scroll of attack",
 
     "description":
     "The old parchment feels like leather in your hands. You can't read the arcane runes hastily scrawled onto the scroll, but somehow the meaning is clear: This scroll will increase your strength.",
@@ -69,7 +69,7 @@ item_scroll_attack = {
 item_scroll_health = {
     "id": "scroll_health",
 
-    "name": "an ancient scroll",
+    "name": "an ancient scroll of health",
 
     "description": "You notice the paper has some springiness when you unravel it. There's a red heart scribbled inside.",
 
@@ -80,7 +80,7 @@ item_scroll_health = {
 item_scroll_speed = {
     "id": "scroll_speed",
     
-    "name": "an ancient scroll",
+    "name": "an ancient scroll of speed",
 
     "description": "The scroll is damp, and completely blank. It will make you faster. You aren't quite sure how you know this.",
 
