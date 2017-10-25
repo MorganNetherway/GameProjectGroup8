@@ -4,19 +4,19 @@ from items import *
 #########################################################################################################
 rooms = {
     "room_1": {
-        "name": "Room 1",
+        "name": "GENESIS GARDEN",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
     "room_2": {
-        "name": "Room 1",
+        "name": "THE TROJAN HORSE",
         "description": "blah blah blah",
         "items": [item_sword],
         "action": "special_well"
     },
     "room_3": {
-        "name": "Room 1",
+        "name": "CORRIDOR OF CHAOS ",
         "description": "blah blah blah",
         "items": None,
         "action": None
@@ -28,31 +28,31 @@ rooms = {
         "action": None
     },
     "room_5": {
-        "name": "Room 1",
+        "name": "MIDAS TOUCH",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
     "room_6": {
-        "name": "Room 1",
+        "name": "TOMB OF THUNDER",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
     "room_7": {
-        "name": "Room 1",
+        "name": "THE BASILISK NEST",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
     "room_8": {
-        "name": "Room 1",
+        "name": "PROMETHEUS' LAIR",
         "description": "blah blah blah",
         "items": None,
         "action": None
     },
     "room_9": {
-        "name": "Room 1",
+        "name": "THE SPRING OF ZEUS",
         "description": "blah blah blah",
         "items": None,
         "action": None
@@ -98,33 +98,33 @@ def special_well():
     print("You are at the well")
 
 def room_1():
-    print("You are in room 1")
+    print("You are in" + " " + rooms["room_1"]["name"])
 def room_2():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_2"]["name"])
 def room_3():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_3"]["name"])
 def room_4():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_4"]["name"])
 def room_5():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_5"]["name"])
 def room_6():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_6"]["name"])
 def room_7():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_7"]["name"])
 def room_8():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_8"]["name"])
 def room_9():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_9"]["name"])
 def room_10():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_10"]["name"])
 def room_11():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_11"]["name"])
 def room_12():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_12"]["name"])
 def room_13():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_13"]["name"])
 def room_14():
-    print("You are in room n")
+    print("You are in" + " " + rooms["room_14"]["name"])
 
 
 
@@ -138,3 +138,5 @@ def gate_4():
     print("You are at gate_4")
 def gate_5():
     print("You are at gate_5")
+
+room_1()
