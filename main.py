@@ -48,14 +48,14 @@ def moveOnMap(user_input):
         else:
             print ("You cannot go any further south")
     elif user_input[1] == "west":
-        if checkForTriggerGate(availableExits["west"]) == True:
-            if "west" in availableExits:
+        if "west" in availableExits:
+            if checkForTriggerGate(availableExits["west"]) == True:
                 player_position = availableExits["west"]
         else:
             print ("You cannot go any further west")
     elif user_input[1] == "east":
-        if checkForTriggerGate(availableExits["east"]) == True:
-            if "east" in availableExits:
+        if "east" in availableExits:
+            if checkForTriggerGate(availableExits["east"]) == True:
                 player_position = availableExits["east"]
         else:
             print ("You cannot go any further east")
