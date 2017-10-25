@@ -90,13 +90,8 @@ item_scroll_speed = {
 
 item_diary_1 = {
     "id": "diary_1",
-<<<<<<< HEAD
-    
-    "name": "a diary: volume I",
-=======
 
-    "name": "",
->>>>>>> b9b022e925f6d9e58ae236d3c09a95b2e18ec261
+    "name": "a diary: volume I",
 
     "description":
     """I, Theseus, son of Aegeus, come from the great metropolis of Athens to slay the beast
