@@ -1,6 +1,7 @@
 from player import *
 from movement import *
 from word_translation import *
+from drawMapFuncs import *
 #from minotaur_encounter import *
 
 current_room = {"items": [item_sword, item_spear, item_shield]}
@@ -70,6 +71,15 @@ while True:
             drop_item(normalised_input[1])
         else:
             print("What do you want to drop?")
+            
+    elif "show" in normalised_input:
+        currentPosition = []
+        position = convertToKey(player_position)
+        currentPosition.append(position)
+        
+        board = movePlayerMap(currentPosition)
+        showMap(board)
+
     else:
         print ("Please use the WASD keys to move")
     checkForTriggerRoom(player_position)
