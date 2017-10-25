@@ -41,11 +41,11 @@ triggerRooms = [
     {"positions": ["12,7", "12,6", "13,7", "13,6"], "roomName": "room_12"},
     {"positions": ["12,4", "12,3", "12,2", "13,4", "13,3", "13,2", "14,4", "14,3", "14,2"], "roomName": "room_13"},
     {"positions": ["12,0", "13,0", "14,0"], "roomName": "room_14"},
-    {"positions": ["4,10"], "roomName": "gate_1"},
-    {"positions": ["6,9"], "roomName": "gate_2"},
-    {"positions": ["4,7"], "roomName": "gate_3"},
-    {"positions": ["8,7"], "roomName": "gate_4"},
-    {"positions": ["4,2"], "roomName": "gate_5"}
+    #{"positions": ["4,10"], "roomName": "gate_1"},
+    #{"positions": ["6,9"], "roomName": "gate_2"},
+    #{"positions": ["4,7"], "roomName": "gate_3"},
+    #{"positions": ["8,7"], "roomName": "gate_4"},
+    #{"positions": ["4,2"], "roomName": "gate_5"}
 ]
 
 gateRooms = [
@@ -88,6 +88,8 @@ def checkForTriggerGate(player_position, inventory):
                                 if result == True:
                                         gateNames[0]["unlocked"] = True
                                         return(result)
+                                else:
+                                        return(False)
                         else:
                                 for item in inventory:
                                         print(item["name"])
