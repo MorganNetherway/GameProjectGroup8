@@ -1,4 +1,5 @@
 import random
+from player import *
 from rooms import *
 import drawMapFuncs
 
@@ -47,6 +48,12 @@ triggerRooms = [
     #{"positions": ["4,2"], "roomName": "gate_5"}
 ]
 
+gateRooms = [
+        {"positions": ["4,2"], "gateName": "gate_6"},
+        {"positions": ["4,10"], "gateName": "gate_3"},
+        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11"}                                    
+        ]
+
 
 def checkForTriggerRoom(player_position):
         global current_room
@@ -56,6 +63,18 @@ def checkForTriggerRoom(player_position):
                 print("You are in" + " " + rooms[current_room]["name"])
                 return current_room
         return None
+
+def checkForTriggerGate(player_position):
+        gateNames = [row for row in gateRooms if convertToKey(player_position) in row['positions']]
+        if len(gateNames) > 0:
+                for item in inventory:
+                        print(item["name"])
+                        print(gateNames[0]["gateName"])
+                        if item["id"] == gateNames[0]["gateName"]:
+                                return True
+                print("You need to find the key for this room")
+                return False
+        return True
 
 def getAvailableExits(player_position):
     exits = {}
