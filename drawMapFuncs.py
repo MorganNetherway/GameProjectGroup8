@@ -1,4 +1,5 @@
 from movement import blockedExits
+from movement import gates
 board = ""
 
 def showMap(board):
@@ -59,6 +60,14 @@ def printWall(positionList, board):
             pass
     return(board)
 
+def printGate(positionList, board):
+    for position in positionList:
+        if board[position] == ".":
+            board = board[:position] + "G" + board[position+1:]
+        else:
+            pass
+    return(board)
+
 def movePlayerMap(position):
     global board
 
@@ -70,6 +79,7 @@ def initMap(board):
 
     board = drawMap(board)
     board = printWall(convertToMap(blockedExits), board)
+    board = printGate(convertToMap(gates), board)
     board = printPlayer(["7,0"], board)
     return(board)
 
