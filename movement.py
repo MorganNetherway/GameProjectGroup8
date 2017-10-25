@@ -23,7 +23,7 @@ blockedExits = [
     "14,9", "14,8", "14,7", "14,6", "14,5", "14,1"
 ]
 
-gates = ["0,3", "4,2","4,10","8,7", "4,7", "6,9","13,1","13,5"]
+
 
 triggerRooms = [
     {"positions": ["2,7"], "roomName": "special_well"},
@@ -34,7 +34,7 @@ triggerRooms = [
     {"positions": ["1,4"], "roomName": "room_5"},
     {"positions": ["3,4", "3,3", "4,4", "4,3"], "roomName": "room_6"},
     {"positions": ["1,3"], "roomName": "room_7"},
-    {"positions": ["7,0","7,1"], "roomName": "room_8"},
+    {"positions": ["8,0"], "roomName": "room_8"},
     {"positions": ["9,14", "9,13", "9,12", "10,14", "10,13", "10,12", "11,14", "11,13", "11,12"], "roomName": "room_9"},
     {"positions": ["13,11", "13,10", "14,11", "14,10"], "roomName": "room_10"},
     {"positions": ["5,8", "5,7", "5,6", "6,8", "6,7", "6,6", "7,8", "7,7", "7,6"], "roomName": "room_11"},
@@ -66,9 +66,12 @@ def checkForTriggerRoom(player_position):
                 current_room = roomNames[0]['roomName']
                 print("You are in" + " " + rooms[current_room]["name"] + "\n")
                 print(rooms[current_room]["description"] + "\n")
-                print("In this room, there is: ", end = "" + "\n")
-                for item in rooms[current_room]["items"]:
-                        print(item["name"])
+                if len(rooms[current_room]["items"]) > 0:
+                        print("In this room, there is: ", end = "" + "\n")
+                        for item in rooms[current_room]["items"]:
+                                print(item["name"])
+                else:
+                        print("There are no items here.")
                 return current_room
         return None
 
