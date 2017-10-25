@@ -6,6 +6,7 @@ from drawMapFuncs import *
 from minotaur_encounter import *
 from rooms import *
 import math
+from initialise import *
 
 turn = 0
 
@@ -193,17 +194,17 @@ while True:
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
         encounter()
-        
+
     if player_stats["health"] <= 0:
         print("      LOSING MESSAGE            ")
         break
-    
+
     if minotaur_health <= 0:
         print("      WINNING MESSGAE           ")
         break
-    
+
     if minotaur_health and player_stats["health"] <= 0:
         print("        DRAW MESSAGE            ")
         break
-    
+
     turn += 1
