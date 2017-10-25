@@ -58,15 +58,15 @@ bronze_key_words = ["bronze", "bronze key", "key of colour bronze"]
 
 gold_key_words = ["gold", "gold key", "key of colour gold"]
 
-diary_1_words = ["diary 1", "diary page 1", "diary1", "diary page1", "diary extract 1", "diary extract1"]
+diary_1_words = ["diary 1", "diary page 1", "diary1", "diary page1", "diary extract 1", "diary extract1", "diary"]
 
-diary_2_words = ["diary 2", "diary page 2", "diary2", "diary page2", "diary extract 2", "diary extract2"]
+diary_2_words = ["diary 2", "diary page 2", "diary2", "diary page2", "diary extract 2", "diary extract2","diary"]
 
-diary_3_words = ["diary 3", "diary page 3", "diary3", "diary page3", "diary extract 3", "diary extract3"]
+diary_3_words = ["diary 3", "diary page 3", "diary3", "diary page3", "diary extract 3", "diary extract3","diary"]
 
-diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extract 4", "diary extract4"]
+diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extract 4", "diary extract4","diary"]
 
-diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5"]
+diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5","diary"]
 
 attack_scroll_words = ["attack scroll", "scroll of attack"]
 
