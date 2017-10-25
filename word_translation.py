@@ -60,19 +60,23 @@ gold_key_words = ["gold", "gold key", "key of colour gold"]
 
 diary_1_words = ["diary 1", "diary page 1", "diary1", "diary page1", "diary extract 1", "diary extract1", "diary"]
 
-diary_2_words = ["diary 2", "diary page 2", "diary2", "diary page2", "diary extract 2", "diary extract2", "diary"]
+diary_2_words = ["diary 2", "diary page 2", "diary2", "diary page2", "diary extract 2", "diary extract2","diary"]
 
-diary_3_words = ["diary 3", "diary page 3", "diary3", "diary page3", "diary extract 3", "diary extract3", "diary"]
+diary_3_words = ["diary 3", "diary page 3", "diary3", "diary page3", "diary extract 3", "diary extract3","diary"]
 
-diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extract 4", "diary extract4", "diary"]
+diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extract 4", "diary extract4","diary"]
 
-diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5", "diary"]
+diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5","diary"]
 
-attack_scroll_words = ["attack scroll", "scroll of attack"]
+attack_scroll_words = ["strength scroll", "scroll of strength"]
 
 health_scroll_words = ["health scroll", "scroll of health"]
 
 speed_scroll_words = ["speed scroll", "scroll of speed"]
+
+read_words = ["read", "scour", "contemplate on"]
+
+push_words = ["push", "shove", "throw"]
 
 #translations of important words into functional command words
 
@@ -101,9 +105,10 @@ word_translations = {
     "diary_3": diary_3_words,
     "diary_4": diary_4_words,
     "diary_5": diary_5_words,
-    "scroll_attack": attack_scroll_words,
+    "scroll_strength": attack_scroll_words,
     "scroll_health": health_scroll_words,
-    "scroll_speed": speed_scroll_words
+    "scroll_speed": speed_scroll_words,
+    "read": read_words
     }
 
 #function which translates important words into useful command words AFTER
@@ -143,16 +148,12 @@ def filter_words(words, skip_words):
     """This function takes a list of words and returns a copy of the list from
     which all words provided in the list skip_words have been removed.
     For example:
-
     >>> filter_words(["help", "me", "please"], ["me", "please"])
     ['help']
-
     >>> filter_words(["go", "south"], skip_words)
     ['go', 'south']
-
     >>> filter_words(['how', 'about', 'i', 'go', 'through', 'that', 'little', 'passage', 'to', 'the', 'south'], skip_words)
     ['go', 'passage', 'south']
-
     """
     checked_words = []
     for i in range(0, len(words)):
@@ -172,7 +173,6 @@ def remove_punct(text):
     marks from a string. Spaces do not count as punctuation and should
     not be removed. The funcion takes a string and returns a new string
     which does not contain any puctuation. For example:
-
     >>> remove_punct("Hello, World!")
     'Hello World'
     >>> remove_punct("-- ...Hey! -- Yes?!...")
@@ -194,7 +194,6 @@ def normalise_input(user_input):
     any extra spaces between words) and further removes all "unimportant"
     words from the list of words using the filter_words() function. The
     resulting list of "important" words is returned. For example:
-
     >>> normalise_input("  Go   south! ")
     ['go', 'south']
     >>> normalise_input("!!!  tAkE,.    LAmp!?! ")
@@ -211,7 +210,6 @@ def normalise_input(user_input):
     ['take', 'gem']
     >>> normalise_input("How about I go through that little passage to the south...")
     ['go', 'passage', 'south']
-
     """
     # Remove punctuation and convert to lower case
     no_punct = remove_punct(user_input).lower()
@@ -227,9 +225,3 @@ def normalise_input(user_input):
     command_words = translate_words(filtered)
 
     return command_words
-
-
-
-    
-
-                
