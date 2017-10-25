@@ -7,7 +7,7 @@ item_gate_6_key = {
 }
 
 item_gate_3_key = {
-    "id": "gate_3",
+    "id": "gate_12",
     "name": "Gold Key",
     "description": "This key will open the gate to THE CORRIDOR OF CHAOS"
 }
@@ -178,6 +178,6 @@ item_refs = {
     "diary_4": item_diary_4,
     "diary_5": item_diary_5,
     "gate_6": item_gate_6_key,
-    "gate_3": item_gate_3_key,
+    "gate_12": item_gate_3_key,
     "gate_11": item_gate_11_key
 }

@@ -41,6 +41,7 @@ triggerRooms = [
     {"positions": ["12,7", "12,6", "13,7", "13,6"], "roomName": "room_12"},
     {"positions": ["12,4", "12,3", "12,2", "13,4", "13,3", "13,2", "14,4", "14,3", "14,2"], "roomName": "room_13"},
     {"positions": ["12,0", "13,0", "14,0"], "roomName": "room_14"},
+    {"positions": ["6,3","6,4","7,3","8,3","8,4"], "roomName": "room_15"},
     #{"positions": ["4,10"], "roomName": "gate_1"},
     #{"positions": ["6,9"], "roomName": "gate_2"},
     #{"positions": ["4,7"], "roomName": "gate_3"},

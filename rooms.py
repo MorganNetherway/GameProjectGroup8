@@ -18,7 +18,7 @@ rooms = {
     "room_3": {
         "name": "CORRIDOR OF CHAOS ",
         "description": "The hallway shifts and turns dangerously, twisting into shapes that cut deep into your mind. Fortunately, the hallway appears too small for the Minotaur to fit through. However, a second ago you were walking on the ceiling, so who can be sure? The primogeniture of nothingness, Chaos was the first thing to exist. Perhaps this is the true center of the Labyrinth?",
-        "items": "",
+        "items": "[item_gate_12_key]",
         "action": None
     },
     "room_4": {
@@ -72,20 +72,25 @@ rooms = {
     "room_12": {
         "name": "WAR ROOM",
         "description": """This room contains a bust of the god Ares, with a scroll contained in his mouth. Ares is the God of War. Not well liked in either Olympus or Earth, he has to resort to resort to more nefarious methods to keep followers. Basking in the chaos of battle, he approved of King Minos' Labyrinth, although rather wanted the Minotaur to be used as a living weapon. This room is dedicated to Ares; take up his blessing and you will be able to fight for longer. \n""",
-        "items": [item_scroll_health],
+        "items": [item_scroll_health, item_gate_11_key],
         "action": None
     },
     "room_13": {
         "name": "HOLE TO THE UNDERWORLD",
         "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity. \n""",
-        "items": [item_diary_2, item_gate_6_key],
+        "items": [item_diary_2],
         "action": None
     },
     "room_14": {
         "name": "TREASURE CHAMBER",
         "description": """Due to the appearance and ferocity of the beast, everyone forgets the fact that the Minotaur itself is half human. Humans crave wealth and power, every being that the half bull half man has devoured, all their personal possessions and gold have been stored as a trophy cabinet in the Labyrinth. King Minos himself has not forgotten to appease his half son by ladening the room with the finest antiquities fit for the gods themselves. A harsh light comes from above, and the treasure betrays an even more blinding glow. It seems unguarded, but your instincts tell you otherwise. When has wealth ever been easy to obtain? \n""",
-        "items": [item_shield, item_scroll_health],
+        "items": [item_shield, item_gate_6_key],
         "action": None
     }
-}
+       "room_15": {
+        "name": "Burial Chamber",
+        "description": """A tiny burial chamber, with 2 main tombs. On one of the tombs is a hook for a key""",
+        "items": [item_scroll_health],
+        "description": """A tiny burial chamber, with 2 main tombs. On one of the tombs is a hook for a key""",
+      }
 
