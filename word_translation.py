@@ -68,7 +68,7 @@ diary_4_words = ["diary 4", "diary page 4", "diary1", "diary page4", "diary extr
 
 diary_5_words = ["diary 5", "diary page 5", "diary1", "diary page5", "diary extract 5", "diary extract1"]
 
-attack_scroll_words = ["attack scroll", "scroll of attack"]
+strength_scroll_words = ["strength scroll", "scroll of strength"]
 
 health_scroll_words = ["health scroll", "scroll of health"]
 
@@ -101,7 +101,7 @@ word_translations = {
     "diary_3": diary_3_words,
     "diary_4": diary_4_words,
     "diary_5": diary_5_words,
-    "scroll_attack": attack_scroll_words,
+    "scroll_strength": strength_scroll_words,
     "scroll_health": health_scroll_words,
     "scroll_speed": speed_scroll_words
     }
