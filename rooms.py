@@ -13,7 +13,7 @@ and good for food; the tree of life also in the midst of the garden, and the tre
     "room_2": {
         "name": "THE TROJAN HORSE",
         "description": "The bane of Troy.",
-        "items": [item_sword],
+        "items": "",
         "action": "special_well"
     },
     "room_3": {
@@ -79,7 +79,7 @@ and good for food; the tree of life also in the midst of the garden, and the tre
     "room_13": {
         "name": "HOLE TO THE UNDERWORLD",
         "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity.""",
-        "items": "",
+        "items": [item_sword],
         "action": None
     },
     "room_14": {
