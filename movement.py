@@ -98,9 +98,8 @@ def checkForTriggerGate(player_position, inventory):
                                         return(False)
                         else:
                                 for item in inventory:
-                                        print(item["name"])
-                                        print("Gate unlocked by " + gateNames[0]["unlocked_by"])
                                         if item["id"] == gateNames[0]["gateName"]:
+                                                print("Gate unlocked by " + gateNames[0]["unlocked_by"])
                                                 gateNames[0]["unlocked"] = True
                                                 return True
                                 print("You need to find the key for this room")
