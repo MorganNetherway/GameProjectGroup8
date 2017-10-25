@@ -50,6 +50,8 @@ spear_words = ["spear"]
 
 map_words = ["show", "map", "show map"]
 
+inventory_words = ["inventory", "inv", "check inv", "check inventory"]
+
 
 
 #translations of important words into functional command words
@@ -69,7 +71,8 @@ word_translations = {
     "sword": sword_words,
     "shield": shield_words,
     "spear": spear_words,
-    "show": map_words
+    "show": map_words,
+    "inventory": inventory_words
     }
 
 #function which translates important words into useful command words AFTER
@@ -78,11 +81,18 @@ word_translations = {
 def translate_words(user_input):
     output = []
     for input_item in user_input:
+        #print(input_item)
         for word_group in word_translations:
+            #print(word_group)
             for word in word_translations[word_group]:
+                #print(word)
                 if word == input_item:
                     output.append(word_group)
-
+                    #print(output)
+    if len(output) == 1:
+        output.append("")
+    else:
+        pass
     return output
 
 
