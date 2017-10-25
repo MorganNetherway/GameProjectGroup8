@@ -68,11 +68,11 @@ diary_4_words = ["diary 4", "diary page 4", "diary4", "diary page4", "diary extr
 
 diary_5_words = ["diary 5", "diary page 5", "diary5", "diary page5", "diary extract 5", "diary extract5","diary"]
 
-attack_scroll_words = ["strength scroll", "scroll of strength"]
+attack_scroll_words = ["strength scroll", "scroll of strength", "strength"]
 
-health_scroll_words = ["health scroll", "scroll of health"]
+health_scroll_words = ["health scroll", "scroll of health", "health"]
 
-speed_scroll_words = ["speed scroll", "scroll of speed"]
+speed_scroll_words = ["speed scroll", "scroll of speed", "speed"]
 
 read_words = ["read", "scour", "contemplate on"]
 
