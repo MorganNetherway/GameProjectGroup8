@@ -3,4 +3,4 @@
 #powerup_health_boost = {"name": "Health Boost Potion", "description": "", "health_boost": 1.5}
 
 #powerup_minotaur_half_speed = {"name": "Minotaur Speed Potion", "description": "",
-                               "minotaur_speed_boost": 0.5}
+#                               "minotaur_speed_boost": 0.5}
