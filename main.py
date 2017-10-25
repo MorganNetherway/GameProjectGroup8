@@ -111,17 +111,6 @@ def print_inventory_items(items):
             item_list.append(item["name"])
         print("You have " + ", ".join(item_list))
         
-    
-
-##    for x in range(0,item_length):
-##        item_list.append(item_refs[items[x]["id"]])
-##        
-##    if len(item_list) == 0:
-##        print("You have nothing haha")
-##    else:
-##        x = list_of_items(item_list)
-##        print("You have " + x + ".")
-##print("")
 
 while True:
     user_input = input("> ").lower()

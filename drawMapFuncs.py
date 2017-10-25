@@ -44,6 +44,9 @@ def printPlayer(positionList, board):
         if board[position] == ".":
             board = board[:position] + "P" + board[position+1:]
             return(board)
+        elif board[position] == "G":
+            board = board[:position] + "P" + board[position+1:]
+            return(board)
         else:
             pass
 
@@ -76,7 +79,6 @@ def movePlayerMap(position):
     return(board)
 
 def initMap(board):
-
     board = drawMap(board)
     board = printWall(convertToMap(blockedExits), board)
     board = printGate(convertToMap(gates), board)

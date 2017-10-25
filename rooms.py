@@ -18,7 +18,7 @@ rooms = {
     "room_3": {
         "name": "CORRIDOR OF CHAOS ",
         "description": "The hallway shifts and turns dangerously, twisting into shapes that cut deep into your mind. Fortunately, the hallway appears too small for the Minotaur to fit through. However, a second ago you were walking on the ceiling, so who can be sure? The primogeniture of nothingness, Chaos was the first thing to exist. Perhaps this is the true center of the Labyrinth?",
-        "items": "[item_gate_12_key]",
+        "items": [item_gate_12_key],
         "action": None
     },
     "room_4": {

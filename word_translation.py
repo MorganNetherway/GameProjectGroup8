@@ -29,14 +29,14 @@ movement_words = ["go", "travel", "move", "walk", "amble", "wander", "sneak",
                  "advance", "progress", "locomote", "proceed"]
 
 north_words = ["north", "forwards", "up", "straight", "northwardly", "northwards",
-              "northernly", "upwards"]
+              "northernly", "upwards", "n"]
 
 south_words = ["south", "back", "backwards", "down", "downwards", "southwards",
-             "southwardly", "backwards"]
+             "southwardly", "backwards","s"]
 
-east_words = ["east", "eastwardly", "eastwards", "right"]
+east_words = ["east", "eastwardly", "eastwards", "right", "e"]
 
-west_words = ["west", "westwardly", "westwards", "left"]
+west_words = ["west", "westwardly", "westwards", "left", "w"]
 
 take_words = ["take", "equip", "claim"]
 
