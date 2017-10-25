@@ -45,7 +45,7 @@ def update_stats_take(item):
         return player_stats
     
     if "health_value" in item:
-        player_health *= item["health_value"]
+        player_stats["health"] *= item["health_value"]
         return player_stats
     
     if "attack_boost" in item:
