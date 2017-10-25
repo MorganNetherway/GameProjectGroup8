@@ -29,8 +29,7 @@ def encounter_run():
     
     #if escape is equal to 1, the player will escape
     if escape == 1:
-        print("You escaped")
-
+        print("You see your chance to escape and take it\n Which direction do you take?:\n")
         return
         
     #otherwise, the player will have to attack the minotaur, and the encounter_attack function will run
