@@ -30,7 +30,7 @@ def list_of_items(items):
     for item in items:
         csl_items.append(item["name"])
     csl_list = ", ".join(csl_items)
-    
+
     return csl_list
 
 def moveOnMap(user_input):
@@ -38,25 +38,30 @@ def moveOnMap(user_input):
     if user_input[1] == "north":
         if "north" in availableExits:
             player_position = availableExits["north"]
+            return True
         else:
             print ("You cannot go any further north")
     elif user_input[1] == "south":
         if "south" in availableExits:
             player_position = availableExits["south"]
+            return True
         else:
             print ("You cannot go any further south")
     elif user_input[1] == "west":
         if "west" in availableExits:
             player_position = availableExits["west"]
+            return True
         else:
             print ("You cannot go any further west")
     elif user_input[1] == "east":
         if "east" in availableExits:
             player_position = availableExits["east"]
+            return True
         else:
             print ("You cannot go any further east")
     else:
         print("That movement isn't possible, try again.")
+    return False
 
 def take_item(item_id):
     for i in range(0, len(current_room["items"])):
@@ -91,7 +96,7 @@ def print_inventory_items(items):
     """
     item_length = len(items)
     item_list = []
-    
+
     for x in range(0,item_length):
 
         if items[x]["id"] == "sword":
@@ -130,11 +135,10 @@ while True:
     user_input = input("> ").lower()
     normalised_input = normalise_input(user_input)
 
-    minotaurMove(minotaur_position)
-    print(minotaur_position)
-
     if "go" in normalised_input:
-        moveOnMap(normalised_input)
+        if moveOnMap(normalised_input):
+            minotaur_position = minotaurMove(minotaur_position, minAvailableExits)
+            print("minatour pos: {}".format(minotaur_position))
 
     elif "take" in normalised_input:
         if len(normalised_input) > 1:
@@ -150,13 +154,13 @@ while True:
 
     elif "inventory" in normalised_input:
         print_inventory_items(inventory)
-        
-            
+
+
     elif "show" in normalised_input:
         currentPosition = []
         position = convertToKey(player_position)
         currentPosition.append(position)
-        
+
         board = movePlayerMap(currentPosition)
         showMap(board)
 
@@ -165,6 +169,7 @@ while True:
 
     current_room = checkForTriggerRoom(player_position)
     availableExits = getAvailableExits(player_position)
+    minAvailableExits = getAvailableExits(minotaur_position)
     print("You are at " + convertToKey(player_position))
     if minotaur_position == player_position:
         encounter()

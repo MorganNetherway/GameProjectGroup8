@@ -1,5 +1,6 @@
 #import the rooms file
 from rooms import *
+from movement import *
 import random
 blockedExits = [
     "0,14", "0,13", "0,12", "0,11",
@@ -31,8 +32,11 @@ minotaur_position = [6,7]
 
 #minotaur's movement speed 0.5: every two turns, 0.25: every four turns etc.
 minotaur_movement_speed = 1
+def minotaurMove(minotaur_position, minAvailableExits):
+    print (minAvailableExits)
+    return minAvailableExits[random.choice(list(getAvailableExits(minotaur_position).keys()))]
 
-def minotaurMove(minotaur_position):
+"""def minotaurMove(minotaur_position):
     global blockedExits
     original = minotaur_position
     positionL = []
@@ -45,7 +49,7 @@ def minotaurMove(minotaur_position):
         randY = 0
     elif randY == 1 or randY == -1:
         randX = 0
-    
+
     minotaur_position[0] += randX
     minotaur_position[1] += randY
 
@@ -60,15 +64,15 @@ def minotaurMove(minotaur_position):
 
     elif minotaur_position[1] < 0:
         minotaur_position[1] = 0
-    
 
-    
+
+
 
     for ch in minotaur_position:
         positionL.append(str(ch))
 
     position = ",".join(positionL)
-        
+
     for x in blockedExits:
         move = False
         if x == position:
@@ -78,4 +82,4 @@ def minotaurMove(minotaur_position):
             pass
 
     return(minotaur_position)
-    
+"""
