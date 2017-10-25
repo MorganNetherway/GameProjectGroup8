@@ -60,6 +60,7 @@ def checkForTriggerRoom(player_position):
         if len(roomNames) > 0:
                 current_room = roomNames[0]['roomName']
                 print("You are in" + " " + rooms[current_room]["name"])
+                print(rooms[current_room]["description"])
                 return current_room
         return None
 
