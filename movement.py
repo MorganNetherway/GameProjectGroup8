@@ -1,6 +1,7 @@
 import random
 from player import *
 from rooms import *
+from riddles import *
 
 current_room = None
 
@@ -48,12 +49,12 @@ triggerRooms = [
 ]
 
 gateRooms = [
-        {"positions": ["0,3"], "gateName": "gate_5", "unlocked_by": "riddle"},
-        {"positions": ["4,2"], "gateName": "gate_6", "unlocked_by": "key"},
-        {"positions": ["4,10"], "gateName": "gate_3", "unlocked_by": "riddle"},
-        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11", "unlocked_by": "key"},
-        {"positions": ["13,1"], "gateName": "gate_14", "unlocked_by": "riddle"},
-        {"positions": ["13,5"], "gateName": "gate_12", "unlocked_by": "key"}
+        {"positions": ["0,3"], "gateName": "gate_5", "unlocked_by": "riddle", "unlocked": False},
+        {"positions": ["4,2"], "gateName": "gate_6", "unlocked_by": "key", "unlocked": False},
+        {"positions": ["4,10"], "gateName": "gate_3", "unlocked_by": "riddle", "unlocked": False},
+        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11", "unlocked_by": "key", "unlocked": False},
+        {"positions": ["13,1"], "gateName": "gate_14", "unlocked_by": "riddle", "unlocked": False},
+        {"positions": ["13,5"], "gateName": "gate_12", "unlocked_by": "key", "unlocked": False}
         ]
 
 
@@ -73,13 +74,28 @@ def checkForTriggerRoom(player_position):
 def checkForTriggerGate(player_position, inventory):
         gateNames = [row for row in gateRooms if convertToKey(player_position) in row['positions']]
         if len(gateNames) > 0:
-                for item in inventory:
-                        print(item["name"])
-                        print(gateNames[0]["gateName"])
-                        if item["id"] == gateNames[0]["gateName"]:
-                                return True
-                print("You need to find the key for this room")
-                return False
+                if gateNames[0]["unlocked"] == True:
+                        return(True)
+                else:
+                        print("This gate is opened by a " + gateNames[0]["unlocked_by"])
+                        if gateNames[0]["unlocked_by"] == "riddle":
+                                if gateNames[0]["gateName"]== "gate_5":
+                                        result = (riddle(riddle_water))
+                                elif gateNames[0]["gateName"] == "gate_3":
+                                        result = (riddle(riddle_steps))
+                                else:
+                                       result = (riddle(riddle_clouds)) 
+                                if result == True:
+                                        gateNames[0]["unlocked"] = True
+                                        return(result)
+                        else:
+                                for item in inventory:
+                                        print(item["name"])
+                                        print(gateNames[0]["gateName"] + " unlocked by " + gateNames[0]["unlocked_by"])
+                                        if item["id"] == gateNames[0]["gateName"]:
+                                                return True
+                                print("You need to find the key for this room")
+                                return False
         return True
 
 
