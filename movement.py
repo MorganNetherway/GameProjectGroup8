@@ -1,5 +1,7 @@
 import random
 from rooms import *
+import drawMapFuncs
+
 blockedExits = [
     "0,14", "0,13", "0,12", "0,11",
     "1,14", "1,12", "1,11", "1,9", "1,5", "1,3", "1,1",
