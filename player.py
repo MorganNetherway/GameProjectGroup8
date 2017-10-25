@@ -3,17 +3,21 @@ from items import *
 from powerups import *
 from minotaur import minotaur_movement_speed
 
+
+player_stats = {"health": 100, "attack": 10, "defense": 10, "speed": 1}
+
+
 #player's speed
-player_speed = 1
+#player_speed = 1
 
 #player's health
-player_health = 100
+#player_health = 100
 
 #player's attack
-player_attack = 10
+#player_attack = 10
 
 #player's defence
-player_defense = 10
+#player_defense = 10
 
 #player's inventory
 inventory = [item_spear]
@@ -27,21 +31,34 @@ def update_stats_take(item):
     global player_defense
     global player_health
     global player_speed
-
+    
     if "attack_value" in item:
-        player_attack *= item["attack_value"]
+        player_stats["attack"] *= item["attack_value"]
+        return player_stats
+    
     if "defense_value" in item:
-        player_defense *= item["defense_value"]
+        player_stats["defense"] *= item["defense_value"]
+        return player_stats
+    
     if "speed_value" in item:
-        player_speed *= item["speed_value"]
+        player_stats["speed"] *= item["speed_value"]
+        return player_stats
+    
     if "health_value" in item:
         player_health *= item["health_value"]
+        return player_stats
+    
     if "attack_boost" in item:
-        player_attack *= powerup_attack_boost["attack_boost"]
+        player_stats["attack"] *= powerup_attack_boost["attack_boost"]
+        return player_stats
+    
     if "health_boost" in item:
-        player_health *= powerup_health_boost["health_boost"]
+        player_stats["health"] *= powerup_health_boost["health_boost"]
+        return player_stats
+    
     if "minotaur_speed_boost" in item:
         minotaur_movement_speed *= powerup_minotaur_half_speed["minotaur_speed_boost"]
+        return player_stats
 
 def update_stats_drop(item):
     global minotaur_movement_speed
@@ -51,16 +68,29 @@ def update_stats_drop(item):
     global player_speed
 
     if "attack_value" in item:
-        player_attack /= item["attack_value"]
+        player_stats["attack"] /= item["attack_value"]
+        return player_stats
+    
     if "defense_value" in item:
-        player_defense /= item["defense_value"]
+        player_stats["defense"]/= item["defense_value"]
+        return player_stats
+    
     if "speed_value" in item:
-        player_speed /= item["speed_value"]
+        player_stats["speed"] /= item["speed_value"]
+        return player_stats
+    
     if "health_value" in item:
-        player_health /= item["health_value"]
+        player_stats["health"] /= item["health_value"]
+        return player_stats
+    
     if "attack_boost" in item:
-        player_attack /= powerup_attack_boost["attack_boost"]
+        player_stats["attack"] /= powerup_attack_boost["attack_boost"]
+        return player_stats
+    
     if "health_boost" in item:
-        player_health /= powerup_health_boost["health_boost"]
+        player_stats["health"] /= powerup_health_boost["health_boost"]
+        return player_stats
+    
     if "minotaur_speed_boost" in item:
         minotaur_movement_speed /= powerup_minotaur_half_speed["minotaur_speed_boost"]
+        return player_stats

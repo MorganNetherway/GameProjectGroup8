@@ -17,7 +17,7 @@ def encounter_push():
         the deep cavern below. You have won!''')
         minotaur_health = 0
     else:
-        damage_dealt = minotaur_attack - player_defense
+        damage_dealt = minotaur_attack - player_stats["defense"]
         print("You charge at the minotaur and miss! The minotaur strikes you for" + str(damage_dealt) + "damage!")
         player_health -= damage_dealt
      
@@ -43,16 +43,16 @@ def encounter_attack():
     global minotaur_health
         
     #calculates the damage the player takes, based upon the minotaur's attack minus the defence value of the player (with items)
-    damage_dealt = minotaur_attack - player_defense
+    damage_dealt = minotaur_attack - player_stats["defense"]
     
     #updates the player's health
-    player_health -= damage_dealt
+    player_stats["health"] -= damage_dealt
     print("You have been struck by the minotaur for " + str(damage_dealt) + " damage.")
-    print("Your health is now " + str(player_health) + ".")
+    print("Your health is now " + str(player_stats["health"]) + ".")
     
     #reduces the minotaur's health by the player's attack
-    minotaur_health -= player_attack
-    print("You have struck the minotaur for " + str(player_attack) + " damage.")
+    minotaur_health -= player_stats["attack"]
+    print("You have struck the minotaur for " + str(player_stats["attack"]) + " damage.")
     print("The minotaur's health is now " + str(minotaur_health) + ".")
     return
 
@@ -72,14 +72,25 @@ def encounter():
     player_input = input("What would you like to do?!?:\n")
 
     #normalises the player's input and runs the corresponding function
-    if "push" in normalise_input(player_input):
-        encounter_push()
-        
-    elif "attack" in normalise_input(player_input):
-        encounter_attack()
-        
-    elif "flee" in normalise_input(player_input):
-        encounter_run()
-        return
+    while True:
+        if "push" in normalise_input(player_input):
+            encounter_push()
+            return
+            
+        elif "attack" in normalise_input(player_input):
+            encounter_attack()
+            return
+            
+        elif "flee" in normalise_input(player_input):
+            encounter_run()
+            return
+
+        else:
+            print('''You can:
+        ATTACK the minotaur
+        RUN from the minotaur
+    What would you like to do?!?:''')
+
+        player_input = input("What would you like to do?!?:\n")
     
 
