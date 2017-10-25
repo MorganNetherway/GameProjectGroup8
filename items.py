@@ -1,5 +1,23 @@
 from ascii_art import *
 
+item_gate_6_key = {
+    "id": "gate_6",
+    "name": "Silver Key",
+    "description": "This key will open the gate to the TOMB OF THUNDER",
+    "mass" = 0.001}
+
+item_gate_3_key = {
+    "id": "gate_3",
+    "name": "Gold Key",
+    "description": "This key will open the gate to THE CORRIDOR OF CHAOS",
+    "mass" = 0.001}
+
+item_gate_11_key = {
+    "id": "gate_11",
+    "name": "Bronze Key",
+    "description": "This key will open any gate leading to THE ROOM OF THE TITANS",
+    "mass" = 0.001}
+    
 item_sword = {
     "id": "sword",
 
