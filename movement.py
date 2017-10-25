@@ -48,9 +48,12 @@ triggerRooms = [
 ]
 
 gateRooms = [
-        {"positions": ["4,2"], "gateName": "gate_6"},
-        {"positions": ["4,10"], "gateName": "gate_3"},
-        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11"}
+        {"positions": ["0,3"], "gateName": "gate_5", "unlocked_by": "riddle"},
+        {"positions": ["4,2"], "gateName": "gate_6", "unlocked_by": "key"},
+        {"positions": ["4,10"], "gateName": "gate_3", "unlocked_by": "riddle"},
+        {"positions": ["8,7", "4,7", "6,9"], "gateName": "gate_11", "unlocked_by": "key"},
+        {"positions": ["13,1"], "gateName": "gate_14", "unlocked_by": "riddle"},
+        {"positions": ["13,5"], "gateName": "gate_12", "unlocked_by": "key"}
         ]
 
 
