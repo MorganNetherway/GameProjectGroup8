@@ -1,4 +1,7 @@
 from items import *
+#########################################################################################################
+#                Somebody needs to finish this ASAP. This isn't hard, just time consuming               #
+#########################################################################################################
 rooms = {
     "room_1": {
         "name": "GENESIS GARDEN",
@@ -9,7 +12,7 @@ rooms = {
     "room_2": {
         "name": "THE TROJAN HORSE",
         "description": "The bane of Troy.",
-        "items": "",
+        "items": [item_sword],
         "action": "special_well"
     },
     "room_3": {
@@ -27,19 +30,19 @@ rooms = {
     "room_5": {
         "name": "MIDAS TOUCH",
         "description": "Don't touch anything you don't want turning into SOLID GOLD.",
-        "items": "",
+        "items": [item_diary_3],
         "action": None
     },
     "room_6": {
         "name": "TOMB OF THUNDER",
         "description": "You can hear thunder faintly booming in the distance. The calling card of Zeus, it's said that wherever the heavenly, sonorous rumblings occur, he swiftly follows. Maybe it represents his blessing? Maybe its his anger at the twisted, treacherous dealings that have happened here? Interpreting the will of the divine is a difficult task. Then again, so is slaying the Minotaur.",
-        "items": "",
+        "items": [item_spear],
         "action": None
     },
     "room_7": {
         "name": "THE BASILISK NEST",
         "description": "When a rooster incubates an egg hatched by a snake, a Basilisk is born. A creature so cruel that it can kill merely with its baleful gaze. Stones crack under its foul breath, and plants wither upon its horrible touch. It only makes sense that such a horrible thing would reside in the Minotaur's prison. Maybe it was placed here as a guard, as surely if any creature could kill the Minotaur it would be this. This room, however, is as unassuming and regular as the Labyrinths halls. It appears to be empty.",
-        "items": "",
+        "items": [item_scroll_attack],
         "action": None
     },
     "room_8": {
@@ -51,13 +54,13 @@ rooms = {
     "room_9": {
         "name": "SHRINE OF HYPERION",
         "description": "This room is covered in glittering, tiny dots, set across a darker, nearly black stone. Some believe in The Harmony of the Spheres, which is the idea that the cosmos are music. They give off a song that we can't pick up on, as we have heard it from birth. What, then, would that make the songs we sing? You listen closely, and notice the dots give off a slight noise, like the humming of a bee. ",
-        "items": "",
+        "items": [item_diary_4, item_scroll_speed],
         "action": None
     },
     "room_10": {
         "name": "MEDUSA’S CHAMBERS",
         "description": "Medusa the deadly gorgon, with serpents as locks of hair, and a stare with the ability to turn people to stone was beheaded by the demigod son of Zeus, called Perseus. Athena, goddess of wisdom and war, then placed the head of Medusa on her shield, as the ultimate defence from her enemies. However it was stolen by King Minos, through Poseidon who felt pity for the king after ruining his life as well as being the natural rival of Athena. Minos placed the head in the Labyrinth in the hope that one day the Minotaur or travellers would stumble across it and turn to stone. The room is filled with statues of your journeying predecessors. """,
-        "items": "",
+        "items": [item_diary_5],
         "action": None
     },
     "room_11": {
@@ -69,19 +72,20 @@ rooms = {
     "room_12": {
         "name": "FOUNTAIN OF DELPHI",
         "description": """This chamber is an interesting one, one shall not pass without receiving a riddle from the prophecy giver the Oracle of Delphi herself. Beware traveller, she can hear your thoughts and play on your inner most secrets, physically you must be up to the task of beating the Minotaur, but mentally it is this chamber which you must overcome, stay clear of the green light and navigate carefully around the marble fountain, voices will be heard.""",
-        "items": "",
+        "items": [item_scroll_health],
         "action": None
     },
     "room_13": {
         "name": "HOLE TO THE UNDERWORLD",
         "description": """Poseidon played a cruel joke on King Minos by making his wife fall in love with a Cretan Bull, however his brother Hades, Lord of the Underworld granted King Minos a favour by creating a direct fall for travellers who enter the Labyrinth straight to the underworld. Beware travellers, it is a literal pit that leads you to hell and if you ended up in the Labyrinth you will likely be devoured by the three headed dog of Hades, Cerberus or walk the Asphodel fields of punishment for eternity.""",
-        "items": [item_sword],
+        "items": [item_diary_2],
         "action": None
     },
     "room_14": {
         "name": "TREASURE CHAMBER",
         "description": """Due to the appearance and ferocity of the beast, everyone forgets the fact that the Minotaur itself is half human. Humans crave wealth and power, every being that the half bull half man has devoured, all their personal possessions and gold have been stored as a trophy cabinet in the Labyrinth. King Minos himself has not forgotten to appease his half son by ladening the room with the finest antiquities fit for the gods themselves. A harsh light comes from above, and the treasure betrays an even more blinding glow. It seems unguarded, but your instincts tell you otherwise. When has wealth ever been easy to obtain?""",
-        "items": "",
+        "items": [item_shield, item_scroll_health],
         "action": None
     }
 }
+
