@@ -91,37 +91,8 @@ def print_inventory_items(items):
     item_list = []
 
     for x in range(0,item_length):
-
-        if items[x]["id"] == "sword":
-            item_list.append(item_sword)
-        elif items[x]["id"] == "shield":
-            item_list.append(item_shield)
-        elif items[x]["id"] == "spear":
-            item_list.append(item_spear)
-        elif items[x]["id"] == "scroll_attack":
-            item_list.append(item_scroll_attack)
-        elif items[x]["id"] == "scroll_health":
-            item_list.append(item_scroll_health)
-        elif items[x]["id"] == "scroll_speed":
-            item_list.append(item_scroll_speed)
-        elif items[x]["id"] == "diary_1":
-            item_list.append(item_diary_1)
-        elif items[x]["id"] == "diary_2":
-            item_list.append(item_diary_2)
-        elif items[x]["id"] == "diary_3":
-            item_list.append(item_diary_3)
-        elif items[x]["id"] == "diary_4":
-            item_list.append(item_diary_4)
-        elif items[x]["id"] == "diary_5":
-            item_list.append(item_diary_5)
-        elif items[x]["id"] == "gate_6":
-            item_list.append(item_gate_6_key)
-        elif items[x]["id"] == "gate_3":
-            item_list.append(item_gate_3_key)
-        elif items[x]["id"] == "gate_11":
-            item_list.append(item_gate_11_key)
-        else:
-            pass
+        item_list.append(item_refs[items[x]["id"]])
+        
     if len(item_list) == 0:
         print("You have nothing haha")
     else:
