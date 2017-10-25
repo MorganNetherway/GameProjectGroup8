@@ -110,16 +110,19 @@ def convertToMap(positionList):
     return(finalList)
 
 def printPlayer(positionList, board):
-    for position in positionList:
+    positionList2 = convertToMap(positionList)
+    for position in positionList2:
         if board[position] == "*":
             board = board[:position] + "P" + board[position+1:]
+            return(board)
         else:
             pass
+
+def removePlayer(board):
+    lastPosition = board.index("P")
+    board = board[:lastPosition] + "*" + board[lastPosition+1:]
     return(board)
     
-    
-    
-
 def printWall(positionList, board):
     for position in positionList:
         if board[position] == "*":
@@ -128,8 +131,19 @@ def printWall(positionList, board):
             pass
     return(board)
 
-board = drawMap(board)
-board = printWall(convertToMap(blockedExits), board)
-board = printPlayer(convertToMap(["7,0"]), board)
-showMap(board)
+def movePlayerMap(position):
+    global board
 
+    board = removePlayer(board)
+    print(board)
+    board = printPlayer(position, board)
+    return(board)
+
+def initMap(board):
+    board = drawMap(board)
+    board = printWall(convertToMap(blockedExits), board)
+    board = printPlayer(["7,0"], board)
+    return(board)
+    
+
+board = initMap(board)
