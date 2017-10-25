@@ -3,12 +3,12 @@ from minotaur import *
 from movement import *
 from word_translation import *
 from drawMapFuncs import *
-#from minotaur_encounter import *
+from minotaur_encounter import *
 
 current_room = {"items": [item_sword, item_spear, item_shield]}
 
 availableExits = getAvailableExits(player_position)
-minAvailableExits = getAvailableExits(minantour_position)
+minAvailableExits = getAvailableExits(minotaur_position)
 
 def moveOnMap(user_input):
     global player_position
