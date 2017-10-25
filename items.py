@@ -163,13 +163,3 @@ I barely escaped, dispensing my gear and keeping only my sword for company. I sh
 I lie here, bloodied and broken, apparently without the strength to even die.
 I suppose the architects of this prison still have a need for me."""
 }
-item_diary_6 = {
-    "id": "shield",
-
-    "name": "a shield from a Spartan",
-
-    "description":
-    ""
-
-}
-
