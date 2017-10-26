@@ -64,7 +64,7 @@ def take_item(item_id):
     else:
         for i in range(0, len(rooms[current_room]["items"])):
             if normalised_input[1] == rooms[current_room]["items"][i]["id"]:
-                print("taking", rooms[current_room]["items"][i]["id"])
+                print("Taking", rooms[current_room]["items"][i]["id"])
                 item = rooms[current_room]["items"].pop(i)
                 inventory.append(item)
                 update_stats_take(item)
@@ -78,6 +78,7 @@ def drop_item(item_id):
     for i in range(0, len(inventory)):
         if normalised_input[1] == inventory[i]["id"]:
             if current_room == None:
+                print()
                 print("You cannot drop that.")
             else:
                 item = inventory.pop(i)
@@ -121,18 +122,21 @@ while True:
         if moveOnMap(normalised_input):
             minotaur_position = minotaurMove(minotaur_position, minAvailableExits)
             if math.sqrt((minotaur_position[0] - player_position[0])**2 + (minotaur_position[1] - player_position[1])**2) < 3:
+                print()
                 print ("The minatour is close.")
             print("Minatour Position: {}".format(minotaur_position))
     elif "take" in normalised_input:
         if len(normalised_input) > 1:
             take_item(normalised_input[1])
         else:
+            print()
             print("What do you want to take?")
 
     elif "drop" in normalised_input:
         if len(normalised_input) > 1:
             drop_item(normalised_input[1])
         else:
+            print()
             print("What do you want to drop?")
 
     elif "inventory" in normalised_input:
@@ -166,16 +170,19 @@ while True:
         encounter(player_position)
 
     if player_stats["health"] <= 0:
+        print()
         print('''After a grueling spar with the minotaur, you have followed in the footsteps of Theseus, and have fallen before the Minotaur.''')
         break
 
     if minotaur_stats["health"] <= 0:
         print()
         print('''The tremendous roars of the minotaur stops. Your heart begins beating softer and slower, the only adrenaline remaining coming from the knowledge that, finally the Minotaur has fallen.''')
+        print()
         print("Your score is " + str(turn))
         break
 
     if minotaur_stats["health"] and player_stats["health"] <= 0:
+        print()
         print('''Looking at your broken body splayed across the floor, you achknowlege that you will soon be following Theseus into the afterlife. But, before you take your last breathe, you look across the room and realise you have accomplished that which he could not: killed the Minotaur.''')
         break
 

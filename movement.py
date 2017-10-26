@@ -87,9 +87,9 @@ def checkForTriggerGate(player_position, inventory):
                         if gateNames[0]["unlocked_by"] == "riddle":
                                 if gateNames[0]["gateName"]== "gate_5":
                                         result = (riddle(riddle_water))
-                                elif gateNames[0]["gateName"] == "gate_3":
+                                elif gateNames[0]["gateName"] == "gate_11":
                                         result = (riddle(riddle_steps))
-                                else:
+                                elif gateNames[0]["gateName"] == "gate_14":
                                        result = (riddle(riddle_clouds)) 
                                 if result == True:
                                         gateNames[0]["unlocked"] = True
