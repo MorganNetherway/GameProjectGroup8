@@ -202,10 +202,5 @@ while True:
         print()
         print("You took " + str(turn) + " turns to beat the game.")
         break
-
-    if minotaur_stats["health"] and player_stats["health"] <= 0:
-        print()
-        print('''Looking at your broken body splayed across the floor, you achknowlege that you will soon be following Theseus into the afterlife. But, before you take your last breathe, you look across the room and realise you have accomplished that which he could not: killed the Minotaur.''')
-        break
     #increase turn at end of loop
     turn += 1
