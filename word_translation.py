@@ -77,7 +77,6 @@ push_words = ["push", "shove", "throw"]
 word_translations = {
     "attack": attack_words,
     "flee": flee_words,
-    "use": use_words,
     "go": movement_words,
     "north": north_words,
     "south": south_words,

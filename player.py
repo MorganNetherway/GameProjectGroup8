@@ -1,6 +1,5 @@
 #import room file
 from items import *
-from powerups import *
 
 player_stats = {"health": 100, "attack": 10, "defense": 10}
 
