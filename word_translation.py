@@ -72,6 +72,13 @@ read_words = ["read", "scour", "contemplate on"]
 
 push_words = ["push", "shove", "throw"]
 
+reflection_words = ["reflection", "reflections", "a reflection"]
+
+footsteps_words = ["footstep", "footsteps", "a footstep"]
+
+cloud_words = ["cloud", "a cloud", "clouds"]
+
+
 #translations of important words into functional command words
 
 word_translations = {
@@ -99,14 +106,23 @@ word_translations = {
     "diary_5": diary_5_words,
     "scroll_strength": attack_scroll_words,
     "scroll_health": health_scroll_words,
-    "read": read_words
+    "read": read_words,
+    "reflection": reflection_words,
+    "footsteps": footsteps_words,
+    "cloud": cloud_words
     }
 
 #function which translates important words into useful command words AFTER
 #unimportant words have been removed
 
 def translate_words(user_input):
+    
+    #creates an empty list which important words will be appended too
     output = []
+
+    #runs a loop with two nested loops, which checks each input the user
+    #makes with each item from each important word list, and appends the list
+    #if there are any matches
     for input_item in user_input:
         #print(input_item)
         for word_group in word_translations:
@@ -135,8 +151,14 @@ skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
               'wish', 'with', 'would']
 
 
+#checks the words after pucntuation has been removed to remove words located in the skip_words list
 def filter_words(words, skip_words):
+
+    #creates an empty list which filtered words will be appended too
     checked_words = []
+
+    #runs a loop which contains a nested loop, which will check each word in the de-punctuated
+    #words with each word in the skip list, and appends those that do not match
     for i in range(0, len(words)):
         for j in range(0, len(skip_words)):
             if words[i] == skip_words[j]:
@@ -148,9 +170,11 @@ def filter_words(words, skip_words):
  
         
 
-    
+#creates a function to remove all punctuation in the user input    
 def remove_punct(text):
     no_punct = ""
+
+    #runs a loop which will append all characters which are not punctuation to the no_punct string
     for char in text:
         if not (char in string.punctuation):
             no_punct = no_punct + char
@@ -164,12 +188,16 @@ def normalise_input(user_input):
     no_punct_list = []
     i = 0
 
+    #removes whitespace around the no_punct words
     no_punct.strip()
 
+    #splits the no_punct list into individual words
     no_punct = no_punct.split()
 
+    #creates a variable containing the return of the filter_words function (removing skip words)
     filtered = filter_words(no_punct, skip_words)
 
+    #converts the translated words into command words
     command_words = translate_words(filtered)
 
     return command_words
