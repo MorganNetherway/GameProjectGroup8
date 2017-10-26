@@ -170,7 +170,9 @@ while True:
         break
 
     if minotaur_stats["health"] <= 0:
-        print('''The tremendous roars of the minotaur stops. You heart begins beating softer and slower, the only adrenaline remaining coming from the knwoelege that, finally the Minotaur has fallen.''')
+        print()
+        print('''The tremendous roars of the minotaur stops. Your heart begins beating softer and slower, the only adrenaline remaining coming from the knowledge that, finally the Minotaur has fallen.''')
+        print("Your score is " + str(turn))
         break
 
     if minotaur_stats["health"] and player_stats["health"] <= 0:
