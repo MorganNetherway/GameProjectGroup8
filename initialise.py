@@ -1,4 +1,4 @@
-
+#this file prints out the rules and story of the game at the start of the game
 import time
 
 print('''The island of Crete, home of the tyranical King Minos has many,

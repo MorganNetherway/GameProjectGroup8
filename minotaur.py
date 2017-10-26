@@ -2,6 +2,7 @@
 from rooms import *
 from movement import *
 import random
+#positions of all walls in the game
 blockedExits = [
     "0,14", "0,13", "0,12", "0,11",
     "1,14", "1,12", "1,11", "1,9", "1,5", "1,3", "1,1",
@@ -20,12 +21,6 @@ blockedExits = [
     "14,9", "14,8", "14,7", "14,6", "14,5", "14,1"
 ]
 
-
-#the current health for the minotaur
-#minotaur_health = 100
-
-#the base damage the player will take
-#minotaur_attack = 25
 
 minotaur_stats = {"health": 100, "attack": 25}
 
