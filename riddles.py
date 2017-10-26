@@ -30,6 +30,8 @@ def riddle(riddle_id):
 
     #checks that the normalised input is the same as the
     #answer located in the dictionary
+    if len(normalised_input) == 0:
+        normalised_input = "wrong"
     if normalised_input[0] == riddle_id["answer"]:
         print("You are correct!")
         return(True)
