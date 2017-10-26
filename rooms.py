@@ -1,6 +1,14 @@
+#imports the items from the item file so they can be added into the
+#players inventory/dropped into the room
 from items import *
 
+#creates a dictionary which contains a dictionary for each room embedded in it
 rooms = {
+
+    #creates a dictionary for each room with the name, which is printed when the player enters,
+    #the description, which is printed when the player enters, the items in the room (if any)
+    #and whether the room has any special actions.
+    
     "room_1": {
         "name": "GENESIS GARDEN",
         "description": '''This room is damp and humid, small flowers of red pushing through the carpet of viscera covering the floor. The air is almost suffocating. The Minotaur was born from Minos' wife bedding a bull. His appetite grew too fast, and he began to consume humans for sustenance. Locked away in the Labyrinth, the Minotaur still hungers. A cruel plague befell Athens as recompense for the murder of King Minos' son, the only cure being seven Athenian youths and seven Athenian maidens sacrificed, fated to being devoured by the Minotaur. Commit that sordid abominaiton to his final resting place, and put an end to all this.''',
