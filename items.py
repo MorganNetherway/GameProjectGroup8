@@ -77,17 +77,6 @@ item_scroll_health = {
     "art": art_scroll
 }
 
-item_scroll_speed = {
-    "id": "scroll_speed",
-
-    "name": "an ancient scroll of speed",
-
-    "description": "The scroll is damp, and completely blank. It will make you faster. You aren't quite sure how you know this.",
-
-    "speed_value": 2,
-    "art": art_scroll
-}
-
 item_diary_1 = {
     "id": "diary_1",
 
@@ -171,7 +160,6 @@ item_refs = {
     "spear": item_spear,
     "scroll_attack": item_scroll_attack,
     "scroll_health": item_scroll_health,
-    "scroll_speed": item_scroll_speed,
     "diary_1": item_diary_1,
     "diary_2": item_diary_2,
     "diary_3": item_diary_3,

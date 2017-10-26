@@ -19,11 +19,7 @@ attack_words = ["attack", "stab", "wound", "injure", "stab", "shiv", "punch",
                "pummel", "beat up", "strike", "pound", "thrash", "inflict",
                "tackle", "kill"]
 
-block_words = ["block", "deflect", "repel", "parry", "counter"]
-
 flee_words = ["run", "sprint", "escape", "flee", "retreat", "bolt", "abscond"]
-
-use_words = ["use", "utilise", "operate", "apply", "cast", "drink"]
 
 movement_words = ["go", "travel", "move", "walk", "amble", "wander", "sneak",
                  "advance", "progress", "locomote", "proceed"]
@@ -72,8 +68,6 @@ attack_scroll_words = ["strength scroll", "scroll of strength", "strength"]
 
 health_scroll_words = ["health scroll", "scroll of health", "health"]
 
-speed_scroll_words = ["speed scroll", "scroll of speed", "speed"]
-
 read_words = ["read", "scour", "contemplate on"]
 
 push_words = ["push", "shove", "throw"]
@@ -82,7 +76,6 @@ push_words = ["push", "shove", "throw"]
 
 word_translations = {
     "attack": attack_words,
-    "block": block_words,
     "flee": flee_words,
     "use": use_words,
     "go": movement_words,
@@ -107,7 +100,6 @@ word_translations = {
     "diary_5": diary_5_words,
     "scroll_strength": attack_scroll_words,
     "scroll_health": health_scroll_words,
-    "scroll_speed": speed_scroll_words,
     "read": read_words
     }
 
@@ -145,16 +137,6 @@ skip_words = ['a', 'about', 'all', 'an', 'another', 'any', 'around', 'at',
 
 
 def filter_words(words, skip_words):
-    """This function takes a list of words and returns a copy of the list from
-    which all words provided in the list skip_words have been removed.
-    For example:
-    >>> filter_words(["help", "me", "please"], ["me", "please"])
-    ['help']
-    >>> filter_words(["go", "south"], skip_words)
-    ['go', 'south']
-    >>> filter_words(['how', 'about', 'i', 'go', 'through', 'that', 'little', 'passage', 'to', 'the', 'south'], skip_words)
-    ['go', 'passage', 'south']
-    """
     checked_words = []
     for i in range(0, len(words)):
         for j in range(0, len(skip_words)):
@@ -169,17 +151,6 @@ def filter_words(words, skip_words):
 
     
 def remove_punct(text):
-    """This function is used to remove all punctuation
-    marks from a string. Spaces do not count as punctuation and should
-    not be removed. The funcion takes a string and returns a new string
-    which does not contain any puctuation. For example:
-    >>> remove_punct("Hello, World!")
-    'Hello World'
-    >>> remove_punct("-- ...Hey! -- Yes?!...")
-    ' Hey  Yes'
-    >>> remove_punct(",go!So.?uTh")
-    'goSouTh'
-    """
     no_punct = ""
     for char in text:
         if not (char in string.punctuation):
@@ -189,28 +160,6 @@ def remove_punct(text):
 
 
 def normalise_input(user_input):
-    """This function removes all punctuation from the string and converts it to
-    lower case. It then splits the string into a list of words (also removing
-    any extra spaces between words) and further removes all "unimportant"
-    words from the list of words using the filter_words() function. The
-    resulting list of "important" words is returned. For example:
-    >>> normalise_input("  Go   south! ")
-    ['go', 'south']
-    >>> normalise_input("!!!  tAkE,.    LAmp!?! ")
-    ['take', 'lamp']
-    >>> normalise_input("HELP!!!!!!!")
-    ['help']
-    >>> normalise_input("Now, drop the sword please.")
-    ['drop', 'sword']
-    >>> normalise_input("Kill ~ tHe :-  gObLiN,. wiTH my SWORD!!!")
-    ['kill', 'goblin', 'sword']
-    >>> normalise_input("I would like to drop my laptop here.")
-    ['drop', 'laptop']
-    >>> normalise_input("I wish to take this large gem now!")
-    ['take', 'gem']
-    >>> normalise_input("How about I go through that little passage to the south...")
-    ['go', 'passage', 'south']
-    """
     # Remove punctuation and convert to lower case
     no_punct = remove_punct(user_input).lower()
     no_punct_list = []

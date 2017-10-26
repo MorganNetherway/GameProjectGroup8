@@ -54,7 +54,7 @@ rooms = {
     "room_9": {
         "name": "SHRINE OF HYPERION",
         "description": "This room is covered in glittering, tiny dots, set across a darker, nearly black stone. Some believe in The Harmony of the Spheres, which is the idea that the cosmos are music. They give off a song that we can't pick up on, as we have heard it from birth. What, then, would that make the songs we sing? You listen closely, and notice the dots give off a slight noise, like the humming of a bee. ",
-        "items": [item_diary_4, item_scroll_speed],
+        "items": [item_diary_4],
         "action": None
     },
     "room_10": {

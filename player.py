@@ -1,14 +1,8 @@
 #import room file
 from items import *
 from powerups import *
-from minotaur import minotaur_movement_speed
 
-
-player_stats = {"health": 100, "attack": 10, "defense": 10, "speed": 1}
-
-
-#player's speed
-#player_speed = 1
+player_stats = {"health": 100, "attack": 10, "defense": 10}
 
 #player's health
 #player_health = 100
@@ -30,7 +24,6 @@ def update_stats_take(item):
     global player_attack
     global player_defense
     global player_health
-    global player_speed
     
     if "attack_value" in item:
         player_stats["attack"] *= item["attack_value"]
@@ -38,10 +31,6 @@ def update_stats_take(item):
     
     if "defense_value" in item:
         player_stats["defense"] *= item["defense_value"]
-        return player_stats
-    
-    if "speed_value" in item:
-        player_stats["speed"] *= item["speed_value"]
         return player_stats
     
     if "health_value" in item:
@@ -55,17 +44,12 @@ def update_stats_take(item):
     if "health_boost" in item:
         player_stats["health"] *= powerup_health_boost["health_boost"]
         return player_stats
-    
-    if "minotaur_speed_boost" in item:
-        minotaur_movement_speed *= powerup_minotaur_half_speed["minotaur_speed_boost"]
-        return player_stats
 
 def update_stats_drop(item):
     global minotaur_movement_speed
     global player_attack
     global player_defense
     global player_health
-    global player_speed
 
     if "attack_value" in item:
         player_stats["attack"] /= item["attack_value"]
@@ -73,10 +57,6 @@ def update_stats_drop(item):
     
     if "defense_value" in item:
         player_stats["defense"]/= item["defense_value"]
-        return player_stats
-    
-    if "speed_value" in item:
-        player_stats["speed"] /= item["speed_value"]
         return player_stats
     
     if "health_value" in item:
@@ -89,8 +69,4 @@ def update_stats_drop(item):
     
     if "health_boost" in item:
         player_stats["health"] /= powerup_health_boost["health_boost"]
-        return player_stats
-    
-    if "minotaur_speed_boost" in item:
-        minotaur_movement_speed /= powerup_minotaur_half_speed["minotaur_speed_boost"]
         return player_stats

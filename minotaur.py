@@ -32,7 +32,5 @@ minotaur_stats = {"health": 100, "attack": 25}
 #minotaur starts at ..........
 minotaur_position = [6,7]
 
-#minotaur's movement speed 0.5: every two turns, 0.25: every four turns etc.
-minotaur_movement_speed = 1
 def minotaurMove(minotaur_position, minAvailableExits):
     return minAvailableExits[random.choice(list(getAvailableExits(minotaur_position).keys()))]
