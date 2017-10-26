@@ -169,11 +169,11 @@ while True:
         print('''After a grueling spar with the minotaur, you have followed in the footsteps of Theseus, and have fallen before the Minotaur.''')
         break
 
-    if minotaur_health <= 0:
+    if minotaur_stats["health"] <= 0:
         print('''The tremendous roars of the minotaur stops. You heart begins beating softer and slower, the only adrenaline remaining coming from the knwoelege that, finally the Minotaur has fallen.''')
         break
 
-    if minotaur_health and player_stats["health"] <= 0:
+    if minotaur_stats["health"] and player_stats["health"] <= 0:
         print('''Looking at your broken body splayed across the floor, you achknowlege that you will soon be following Theseus into the afterlife. But, before you take your last breathe, you look across the room and realise you have accomplished that which he could not: killed the Minotaur.''')
         break
 

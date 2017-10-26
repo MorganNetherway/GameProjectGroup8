@@ -22,10 +22,12 @@ blockedExits = [
 
 
 #the current health for the minotaur
-minotaur_health = 100
+#minotaur_health = 100
 
 #the base damage the player will take
-minotaur_attack = 25
+#minotaur_attack = 25
+
+minotaur_stats = {"health": 100, "attack": 25}
 
 #minotaur starts at ..........
 minotaur_position = [6,7]
